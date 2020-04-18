@@ -1,0 +1,85 @@
+@import url('http://fonts.googleapis.com/css?family=Oswald');
+
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Oswald';
+    font-style: normal;
+    font-weight: normal;
+    background-color: #EAF7FB;
+}
+.logo{
+    margin-left: 15px;
+}
+.text_cabecalho {
+    text-transform: uppercase;
+    font-size: 30px;
+    margin-top: 60px;
+    margin-right: 20px;
+    color: #EAF7FB;
+}
+
+.rect_cabecalho {
+    width: auto;
+    height: 134px;
+    background: #041846;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    display: flex;
+    justify-content: space-between;
+}
+
+.text_cabecalho:hover {
+    transition-duration: 0.5s;
+    cursor: pointer;
+    color: #F2994A;;
+}
+
+.faq_box{
+    margin-top: 30px;
+    font-size: 40px;
+    color: #041846;
+    display: flex;
+    justify-content: space-between;
+}
+
+.btnAnswer{
+    background-color: none; /* Blue background */
+    background: 0em;
+    border: none; /* Remove borders */
+    cursor: pointer; /* Mouse pointer on hover */
+}
+
+.btnAnswer:active {
+    text-shadow: 0 5px #666;
+  }
+
+.faq_and_answer{
+    text-align: center;
+    margin: auto;
+    display:flex;
+    width: 50%;
+    flex-direction: column;
+}
+
+.answer{
+    font-size: 15px;
+    color: #041846;
+    opacity: 0.8;
+
+}
+.title_faqs{
+    font-size: 40px;
+    font-weight: 500;
+    color: #F2994A;
+    text-shadow: 1px 1px 1px gray;
+    text-align: center;
+}
+.blue_line{
+    color: #041846;
+    background-color: #041846;
+    border: 0;
+    clear:both;
+    display:block;
+    width: 96%;    
+    height: 1px;
+}
