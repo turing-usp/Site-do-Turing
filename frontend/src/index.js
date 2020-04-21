@@ -3,10 +3,11 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import Cabecalho from './Cabecalho'
 import Faq from './Faq'
+import Homepage from './Homepage'
 
 ReactDOM.render(<div>
     <Cabecalho />
-    <Faq />
+    <Homepage />
     </div>, 
     document.getElementById('root')
     )
