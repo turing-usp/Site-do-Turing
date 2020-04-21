@@ -1,4 +1,5 @@
 @import url('http://fonts.googleapis.com/css?family=Oswald');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&display=swap');
 
 html, body {
     margin: 0;
@@ -82,4 +83,71 @@ html, body {
     display:block;
     width: 96%;    
     height: 1px;
+}
+.rect_rodape {
+    width: auto;
+    height: 199px;
+    background: #041846;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    display: flex;
+    justify-content: space-between;
+}
+.logo2{
+    margin-left: 72px;
+    margin-top: 60px;
+    width: 217px;
+    height: 81px;
+}
+.follow{
+    margin-top:56px;
+    text-align: center;
+}
+.follow_box{
+    width: 412px;
+    height: 34px;
+
+    background: #F5761D;
+    border-radius: 30px;
+}
+.follow_text{
+    text-align: center;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 25px;
+    color: #FFFFFF;
+}
+.link_rodape {
+    width: 52px;
+    height: 52px;
+    margin-right: 5px;
+    margin-left: 5px;
+    transition: 0.2s;
+    border-radius: 26px;
+}
+.link_rodape:hover{
+    transform: scale(1.2);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+.location {
+    text-align: left;
+    font-family: 'Open Sans';
+    margin-right: 61px;
+    margin-top: 30px;
+    font-weight: bold;
+    font-style: normal;
+    font-size: 18px;
+    line-height: 25px;
+    color: #FFFFFF;
+}
+.location_text {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 16px;
+    color: #FFFFFF;
+}
+.location_icon{
+    margin-right: 11px;
 }
