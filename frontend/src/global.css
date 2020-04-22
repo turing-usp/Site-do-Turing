@@ -1,0 +1,133 @@
+@import url('http://fonts.googleapis.com/css?family=Oswald');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap');
+
+
+/* body e html geral */
+
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Oswald';
+    font-style: normal;
+    font-weight: normal;
+    background-color: #EAF7FB
+}
+
+
+/****************************/
+/* Estilização do Cabeçalho */
+/****************************/
+
+
+.cabecalho_logo{
+    margin-left: 5em
+}
+.text_cabecalho {
+    text-transform: uppercase;
+    font-size: 1.5em;
+    margin-top: 2.5em;
+    margin-right: 2em;
+    color: #EAF7FB;
+    text-decoration: none
+}
+
+.rect_cabecalho {
+    width: auto;
+    height: 10em;
+    background: #041846;
+    box-shadow: 0px 0.2em 0.2em rgba(0, 0, 0, 0.25);
+    display: flex;
+    justify-content: space-between
+}
+
+
+a {
+    color: #EAF7FB;
+    text-decoration: none;
+    outline: 0
+}
+a:visited {
+    text-transform: inherit;
+    text-decoration: none; 
+    font-size: inherit;
+    margin-top: inherit;
+    margin-right: inherit;
+    color: inherit
+
+}
+.text_cabecalho:hover {
+    transition-duration: 0.2s;
+    cursor: pointer;
+    color: #F2994A
+}
+
+
+
+/*************************/
+/* Estilização do Rodapé */
+/*************************/
+
+
+.rodape {
+    width: 1300;
+    height: 199px;
+    background: #041846;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 100px
+}
+.rodape_logo2{
+    margin-left: 72px;
+    margin-top: 60px;
+    width: 217px;
+    height: 81px
+}
+.rodape_social{
+    margin-top: 30px;
+    text-align: center
+}
+.rodape_social_box{
+    width: 412px;
+    height: 28px;
+    background: #F5761D;
+    border-radius: 30px;
+    text-align: center;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 25px;
+    color: #FFFFFF;
+    padding: 5px
+}
+
+.link_rodape {
+    width: 52px;
+    height: 52px;
+    margin-right: 5px;
+    margin-left: 5px;
+    transition: 0.025s;
+    border-radius: 26px
+}
+.link_rodape:hover{
+    transform: scale(1.2);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5)
+}
+.location {
+    text-align: left;
+    font-family: 'Open Sans';
+    margin-right: 61px;
+    margin-top: 30px;
+    font-weight: bold;
+    font-style: normal;
+    font-size: 18px;
+    line-height: 25px;
+    color: #FFFFFF
+}
+.location_text {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 16px;
+    color: #FFFFFF
+}

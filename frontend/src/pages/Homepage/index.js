@@ -1,16 +1,19 @@
 import React, { useEffect, useState } from "react";
 import ReactDOM from 'react-dom';
-import fundo from "./assets/background.png";
-import './index.css';
-import ialogo from "./assets/imag-aprenda-ia.png";
-import projeto from "./assets/apresentacao.png";
-import evento from "./assets/eventos.png";
-import computador from "./assets/foto-computador.png";
-import projetos from "./assets/img-projetos.png";
+import fundo from "../../assets/background.png";
+import './styles.css';
+import ialogo from "../../assets/imag-aprenda-ia.png";
+import projeto from "../../assets/apresentacao.png";
+import evento from "../../assets/eventos.png";
+import computador from "../../assets/foto-computador.png";
+import projetos from "../../assets/img-projetos.png";
+import Cabecalho from '../../Tags/Cabecalho';
+import Rodape from '../../Tags/Rodape';
 
 export default function Homepage(){
     return(
         <div>
+            <Cabecalho />
             <div class="background-image">
                 <img class="background-image" src={fundo} alt="fundo-azul"></img>
             </div>
@@ -38,6 +41,10 @@ export default function Homepage(){
                 <h2 class="descricao" id="descricao-projetos"> ...é o sonho dele e o Naruto daria a vida por isso sem hesitar. Meu palpite é que ele se cansou de chorar e decidiu fazer alguma coisa a respeito!</h2>
                 <img class="projetos" src={projetos} alt="projetos"></img>
             </div>
+            <div class='rodape_homepage'>
+                <Rodape />
+            </div>
+            
         </div>
     );
 }
