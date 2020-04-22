@@ -10,7 +10,7 @@ html, body {
     font-family: 'Oswald';
     font-style: normal;
     font-weight: normal;
-    background-color: #EAF7FB;
+    background-color: #EAF7FB
 }
 
 
@@ -20,7 +20,7 @@ html, body {
 
 
 .cabecalho_logo{
-    margin-left: 5em;
+    margin-left: 5em
 }
 .text_cabecalho {
     text-transform: uppercase;
@@ -28,7 +28,7 @@ html, body {
     margin-top: 2.5em;
     margin-right: 2em;
     color: #EAF7FB;
-    text-decoration: none;
+    text-decoration: none
 }
 
 .rect_cabecalho {
@@ -37,11 +37,14 @@ html, body {
     background: #041846;
     box-shadow: 0px 0.2em 0.2em rgba(0, 0, 0, 0.25);
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between
 }
+
+
 a {
     color: #EAF7FB;
     text-decoration: none;
+    outline: 0
 }
 a:visited {
     text-transform: inherit;
@@ -49,13 +52,13 @@ a:visited {
     font-size: inherit;
     margin-top: inherit;
     margin-right: inherit;
-    color: inherit;
+    color: inherit
 
 }
 .text_cabecalho:hover {
     transition-duration: 0.2s;
     cursor: pointer;
-    color: #F2994A;;
+    color: #F2994A
 }
 
 
@@ -71,17 +74,17 @@ a:visited {
     background: #041846;
     display: flex;
     justify-content: space-between;
-    margin-top: 100px;
+    margin-top: 100px
 }
 .rodape_logo2{
     margin-left: 72px;
     margin-top: 60px;
     width: 217px;
-    height: 81px;
+    height: 81px
 }
 .rodape_social{
     margin-top: 30px;
-    text-align: center;
+    text-align: center
 }
 .rodape_social_box{
     width: 412px;
@@ -95,7 +98,7 @@ a:visited {
     font-size: 18px;
     line-height: 25px;
     color: #FFFFFF;
-    padding: 5px;
+    padding: 5px
 }
 
 .link_rodape {
@@ -104,11 +107,11 @@ a:visited {
     margin-right: 5px;
     margin-left: 5px;
     transition: 0.025s;
-    border-radius: 26px;
+    border-radius: 26px
 }
 .link_rodape:hover{
     transform: scale(1.2);
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5)
 }
 .location {
     text-align: left;
@@ -119,12 +122,12 @@ a:visited {
     font-style: normal;
     font-size: 18px;
     line-height: 25px;
-    color: #FFFFFF;
+    color: #FFFFFF
 }
 .location_text {
     font-style: normal;
     font-weight: bold;
     font-size: 14px;
     line-height: 16px;
-    color: #FFFFFF;
+    color: #FFFFFF
 }

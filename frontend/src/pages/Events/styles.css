@@ -1,0 +1,37 @@
+h1{
+    text-align: Center;
+    color: #434343
+}
+.container{
+    text-align: Center
+}
+.description {
+    text-align: Center
+}
+.more_events_box{
+    width: 206px;
+    height: 45px;
+    background: #F5761D;
+    border-radius: 30px;
+    text-align: Center;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 25px;
+    color: #191919;
+    padding: 5px;
+}
+.wrapper{
+    text-align: Center
+}
+
+
+button::-moz-focus-inner {
+    border: 0;
+  }
+  
+  
+button:active{
+    outline: 0;
+}
