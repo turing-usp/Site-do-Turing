@@ -1,13 +1,12 @@
 import React, { useEffect, useState } from "react";
 import ReactDOM from 'react-dom';
-import logo from './assets/logo.png';
-import './index.css';
+import logo from '../../assets/logo.png';
+import './styles.css';
 import {FiPlus} from 'react-icons/fi'
+import Cabecalho from '../../Tags/Cabecalho.js'
+import Rodape from '../../Tags/Rodape.js'
 
-
-
-
-function Faq () {
+export default function ContactUs () {
     const [numeroFaq, setNumero] = useState(2);
 
     var i;
@@ -18,6 +17,7 @@ function Faq () {
 
     return (
         <div>
+            <Cabecalho />
             <div class="faq_and_answer">
                 <span class="title_faqs">FAQs</span>
                 <div class= "faq_box">
@@ -48,8 +48,7 @@ function Faq () {
                 </div>
                 <hr class="blue_line"/>
             </div>
+            <Rodape />
         </div>
     );
 }
-
-export default Faq;
