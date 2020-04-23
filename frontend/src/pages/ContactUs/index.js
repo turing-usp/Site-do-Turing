@@ -16,7 +16,7 @@ export default function ContactUs () {
 
 
     return (
-        <div>
+        <div class='container'>
             <Cabecalho />
             <div class="faq_and_answer">
                 <span class="title_faqs">FAQs</span>

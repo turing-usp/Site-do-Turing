@@ -48,5 +48,6 @@
     border: 0;
     clear:both;
     display:block;
-    width: 96%;    
+    width: 96%;
+    height: 0.05em;
 }

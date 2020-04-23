@@ -8,7 +8,7 @@ import Rodape from '../../Tags/Rodape.js'
 
 export default function Events () {
     return (
-        <div>
+        <div class='container'>
             <Cabecalho />
             <h1>Nossos Eventos</h1>
             <p class='description'>
