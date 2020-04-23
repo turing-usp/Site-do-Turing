@@ -9,7 +9,7 @@ import Rodape from '../../Tags/Rodape.js'
 
 export default function LearnAI () {
     return (
-        <div>
+        <div class='container'>
             <Cabecalho />
                 <div class="arvore_de_habilidades">
                     <span class="titulo_arvore">Árvore de Habilidades</span>
