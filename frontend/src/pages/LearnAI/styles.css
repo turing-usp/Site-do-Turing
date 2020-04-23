@@ -1,0 +1,45 @@
+.arvore_de_habilidades{
+    margin-top: 4em;
+    display: flex;
+    flex-direction: column;
+}
+
+.arvhab-image{
+    margin-left: 42%;
+    width: 15em;
+    height: auto;
+    box-sizing: border-box;
+}
+.descricao_da_arvore{
+    margin-top: 1em;
+    color: #929292;
+    text-align: center;
+    font-family: Open Sans;
+}
+.coggle{
+    margin-left: auto;
+    margin-right: auto;
+    width: 60em;
+    height: 25em;
+}
+
+.arvore_coggle{
+    margin-top: 2em;
+    width: 100%;
+    height: 100%;
+}
+
+.titulo_arvore{
+    margin-top: 2em;
+    font-size: 3em;
+    font-weight: 500;
+    color: #F2994A;
+    text-shadow: 0.03em 0.03em 0.03em gray;
+    text-align: center;
+}
+
+.medium{
+    margin-top: 4em;
+    display: flex;
+    flex-direction: column;
+}
