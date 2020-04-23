@@ -8,7 +8,7 @@ import Rodape from '../../Tags/Rodape.js'
 
 export default function AboutUs () {
     return (
-        <div>
+        <div class='container'>
             <Cabecalho />
             <Rodape />
         </div>
