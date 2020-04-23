@@ -1,3 +1,107 @@
+
+/* FORMULARIO */
+.formulario {
+    text-align: center;
+    margin-top: 60px;
+}
+
+/* Inputs gerais (nome, e-mail, etc.) */
+.entrada {
+    width: 50%;
+    padding: 20px;
+    margin: 0.5%;
+    box-sizing: border-box;
+    font-size: 15px;
+    border-radius: 20px;
+    border: 2px solid rgb(255, 255, 255);
+    background-color: rgb(255, 255, 255);  
+    color: rgb(0, 0, 0);
+  }
+  
+  .entrada:focus {
+    border: 2px solid rgb(255, 102, 0);
+    transition: 0.5s;
+  }  
+  
+  /* Caixa de texto/mensagem */
+  .mensagem {
+    width: 39%;
+    height: 130px;
+    padding: 20px;
+    margin: 0.5%;
+    font-size: 15px;
+    font: normal;
+    box-sizing: border-box;
+    border-radius: 30px;
+    border: 2px solid rgb(255, 255, 255);
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    resize: vertical;
+    font-family: Arial, Helvetica, sans-serif;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .mensagem:focus {
+    border: 2px solid rgb(30, 6, 139);
+    transition: 0.5s;
+  }  
+
+  /* Scrollbar da caixa de texto/mensagem */  
+  .mensagem::-webkit-scrollbar {
+    display: none;
+    width: 0px;
+    background: transparent;
+  }
+  
+  /* Botão enviar */
+  .enviar {
+    background-color: rgb(255, 102, 0);
+    border-radius: 30px;
+    border: none;
+    color: white;
+    font-size: 130%;
+    padding: 20px;
+    margin: 0.5%;
+    cursor: pointer;
+    transition: all 0.5s;
+    width: 10%;
+    padding-left: 1.5%;
+    vertical-align: top;
+  }
+  
+  .enviar:hover{
+    background-color: rgb(255, 51, 0);
+  }
+  
+  .enviar span {
+    cursor: pointer;
+    position: relative;
+    transition: 1s;
+  }
+  
+  .enviar span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: 30px;
+    transition: 0.5s;
+  }
+  
+  .enviar:hover span {
+    padding-right: 20px;
+  }
+  
+  .enviar:hover span:after {
+    opacity: 1;
+    right: 0;
+  }
+
+
+/* FAQ */
+
+
 .title_faqs{
     margin-top:2em;
 }
@@ -48,6 +152,5 @@
     border: 0;
     clear:both;
     display:block;
-    width: 96%;
-    height: 0.05em;
+    width: 96%;   
 }

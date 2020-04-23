@@ -35,7 +35,6 @@ export default function Homepage(){
                 <h2 class="descricao" id="descricao-aprenda-ia">...é o sonho dele e o Naruto daria a vida por isso sem hesitar. Meu palpite é que ele se cansou de chorar e decidiu fazer alguma coisa a respeito!</h2>
                 <img class="img-aprenda-ia" src={ialogo} alt="logo-ia"></img>
             </div>
-            
                 <Parallax style={{width: '100%'}}
                 strength={250}>
                     <div style={{height: 700}}/>
@@ -43,8 +42,6 @@ export default function Homepage(){
                         <img sizes={{height: '85%', width: '100%'}} src={projeto} alt="projeto"></img>
                     </Background>
                 </Parallax>
-                
-            
             <div class='evento'>
                 <h1 class="titulo" id="eventos">Eventos</h1>
                 <h2 class="descricao" id="descricao-eventos">...Mesmo assim eu nunca vi ele chorar, ficar zangado ou se dar por vencido, ele está sempre disposto a melhorar, ele quer ser respeitado...</h2>
@@ -55,11 +52,10 @@ export default function Homepage(){
                     strength={250}
                 >
                     <div style={{height: 700}}/>
-                    <Background  >
+                    <Background>
                     <img sizes={{width: '100%', height: '100%'}} src={computador} alt="foto computador"></img>
                     </Background>
                 </Parallax>
-                
             </div>
             <div>
                 <h1 class="titulo" id="projetos">Projetos</h1>
