@@ -27,7 +27,32 @@ export default function LearnAI () {
                 </div>
                 <div class="medium">
                     <span class="titulo_arvore">Artigos do Medium</span>
+                    <div class="medium_posts">
+                        <div class="post">
+                            <div class="medium_pic">
+                            </div>
+                            <div class="medium_title">
+                                Artigo #1
+                            </div>
+                        </div>
+                        <div class="post">
+                            <div class="medium_pic">
+                            </div>
+                            <div class="medium_title">
+                                Artigo #2
+                            </div>
+                        </div>
+                        <div class="post">
+                            <div class="medium_pic">
+                            </div>
+                            <div class="medium_title">
+                                Artigo #3
+                            </div>
+                        </div>
+                    </div>
+                    <button class="moreposts">Mais posts</button>
                 </div>
+                
                     <Rodape />
         </div>
     );
