@@ -1,6 +1,6 @@
 # Site do Grupo Turing
 
-:construction: Repository on progess
+:construction: Repository on progress
 
 ## Stack
 - Front-end: ReactJS
