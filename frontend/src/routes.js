@@ -14,12 +14,11 @@ export default function Routes(){
         <BrowserRouter>
             <Switch>
                 <Route path="/" exact component={Homepage} />
-                <Route path="/AboutUs" exact component={AboutUs} />
-                <Route path="/Events" exact component={Events} />
-                <Route path="/Projects" exact component={Projects} />
-                <Route path="/LearnAI" exact component={LearnAI} />
-                <Route path="/ContactUs" exact component={ContactUs} />
-
+                <Route path="/aboutus" exact component={AboutUs} />
+                <Route path="/events" exact component={Events} />
+                <Route path="/projects" exact component={Projects} />
+                <Route path="/learnai" exact component={LearnAI} />
+                <Route path="/contactus" exact component={ContactUs} />
             </Switch>
         </BrowserRouter>
     )

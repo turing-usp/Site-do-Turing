@@ -1,12 +1,4 @@
 
-
-.background-image{
-    position: absolute;
-    width: 100%;
-    left: 0px;
-    box-sizing: border-box;
-}
-
 .caixa-superior{
     position: absolute;
     width: 75%;
@@ -90,6 +82,10 @@
     color: #434343;
 }
 
+.aprenda{
+    height: 600px;
+}
+
 #descricao-aprenda-ia{
     width: 29em;
     height: 20em;
@@ -108,19 +104,21 @@
 }
 
 .projeto{
-    position: absolute;
     width: 100%;
-    height: 100%;
+    height: 80%;
     left: 0em;
     top: 82em;
 }
-
+.evento{
+    height: 280px;
+}
 #eventos{
     position: absolute;
     width: 20em;
     height: 10em;
     left: 2.5em;
-    top: 65em;
+
+    top: 63em;
 }
 
 #descricao-eventos{
@@ -128,24 +126,20 @@
     width: 30em;
     height: 7em;
     left: 5em;
-    top: 108.5em;
+    top: 106em;
 }
 
 .img-eventos{
     position: absolute;
     left: 51em;
-    top: 130em;
+    top: 126em;
     border-radius: 30px;
     width: 20em;
     height: 15em;
 }
 
 .computador{
-    position: absolute;
     width: 100%;
-    height: 100%;
-    left: 0em;
-    top: 153em;
 }
 
 #projetos{
@@ -168,7 +162,7 @@
     width: 20em;
     height: 15em;
     left: 10em;
-    top: 201em;
+    top: 200em;
 
     border-radius: 30px;
 }

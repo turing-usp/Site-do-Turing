@@ -7,7 +7,8 @@ import Cabecalho from '../../Tags/Cabecalho.js'
 import Rodape from '../../Tags/Rodape.js'
 
 export default function ContactUs () {
-
+  
+  
     const [nome, setNome] = useState('')
     const [email, setEmail] = useState('')
     const [grupo, setGrupo] = useState('')
@@ -42,7 +43,7 @@ export default function ContactUs () {
     const [show2, setExpand2] = useState(false);
 
     return (
-        <div>
+        <div class='container'>
             <Cabecalho />    
 
             <form class='formulario'>

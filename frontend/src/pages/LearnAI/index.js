@@ -9,7 +9,7 @@ import Rodape from '../../Tags/Rodape.js'
 
 export default function LearnAI () {
     return (
-        <div>
+        <div class='container'>
             <Cabecalho />
                 <div class="arvore_de_habilidades">
                     <span class="titulo_arvore">Árvore de Habilidades</span>
@@ -52,8 +52,7 @@ export default function LearnAI () {
                     </div>
                     <button class="moreposts">Mais posts</button>
                 </div>
-                
-                    <Rodape />
+                <Rodape />
         </div>
     );
 }
