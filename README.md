@@ -1,8 +1,8 @@
 # Site do Grupo Turing
-:construction: Repository on progess=
+:construction: Repository on progress
 ## Stack
 - Front-end: ReactJS
-- Back-end: SQLite + NodeJS
+- Back-end: NodeJS + Express
 ---
 ## :art: Front-end team
 - [Camila Lobianco](https://github.com/camilalobianco)
