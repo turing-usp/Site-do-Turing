@@ -29,7 +29,7 @@
 .saiba-mais{
     position: absolute;
     width: 20em;
-    height: 41px;
+    height: 3em;
     left: 28.5em;
     top: 33em;
     background: #F2994A;
@@ -83,7 +83,7 @@
 }
 
 .aprenda{
-    height: 600px;
+    height: 34rem;
 }
 
 #descricao-aprenda-ia{
@@ -110,7 +110,7 @@
     top: 82em;
 }
 .evento{
-    height: 280px;
+    height: 25rem;
 }
 #eventos{
     position: absolute;
@@ -171,5 +171,5 @@
     position: absolute;
     width: 100%;
     height: 199px;
-    bottom: -3100px;
+    bottom: -195rem;
 }

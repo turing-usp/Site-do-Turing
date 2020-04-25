@@ -14,7 +14,8 @@ html, body {
 }
 
 .container{
-    margin-top:180px;
+    margin-top: 10em;
+    font-size: 18px;
 }
 
 /****************************/

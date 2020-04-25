@@ -1,15 +1,41 @@
 import React, { useEffect, useState } from "react";
 import ReactDOM from 'react-dom';
+import {Link} from 'react-router-dom';
 import logo from '../../assets/logo.png';
 import './styles.css';
 import {FiPlus} from 'react-icons/fi'
 import Cabecalho from '../../Tags/Cabecalho.js'
 import Rodape from '../../Tags/Rodape.js'
 
+import api from '../../services/api.js'
+
 export default function Projects () {
+
+    const [projects, setProjects] = useState([]);
+    useEffect(() => {
+        api.get('projects').then(response => {
+            setProjects(response.data);
+        })
+    });
+
     return (
         <div class='container'>
             <Cabecalho />
+            <div class='titulo_projetos'>
+                Projetos
+            </div>
+            <div class='descricao_projetos'>
+                Veja alguns projetos feitos por nossas áreas de foco.
+            </div>
+            <ul>
+                {projects.map(project => (
+                    <li key={ project.projectId }>
+                        <strong>{project.description}</strong>
+                        <a href={project.githubRepo} ><p>{project.githubRepo}</p></a>
+                        <p>Feito por: {project.squad}</p>
+                    </li>
+                ))}
+            </ul>
             <Rodape />
         </div>
     );
