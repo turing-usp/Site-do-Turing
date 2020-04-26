@@ -17,7 +17,8 @@ module.exports = {
     },
 
     async index(request, response){
-            const projects = await connection('projects').select('*');
-            return response.json(projects)
+            const {tags = ''} = request.query;
+            const projects = await connection('projects').where('tags', 'like', `%${tags}%`).select('*');
+            return response.json(projects);
     }
 }
