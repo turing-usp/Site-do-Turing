@@ -1,0 +1,16 @@
+
+.titulo_aboutus{
+    margin-top: 2em;
+    font-size: 3em;
+    font-weight: 500;
+    color: #F2994A;
+    text-shadow: 0.03em 0.03em 0.03em gray;
+    text-align: center;
+}
+.descricao_aboutus{
+    margin-top: 1em;
+    color: #929292;
+    text-align: center;
+    font-family: Open Sans;;
+    font-size: 1.5em
+}
