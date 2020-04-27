@@ -4,19 +4,22 @@ const mailjet = require('node-mailjet')
     .connect(config.secrets.MAILJET_PUBLIC_API_KEY, config.secrets.MAILJET_SECRET_API_KEY)
 
 const sendEmail = function(name, email, entity, motivation, message){
+    const TURING_EMAIL = ""
+    const FROM_NAME = name
+    const TO_NAME = "Grupo Turing"
     let request = mailjet
         .post('send',{'version':'v3.1'})
         .request({
             "Messages":[
                 {
                     "From":{
-                        "Email": "leonardo.murakami@usp.br",
-                        "Name": "Contato Site"
+                        "Email": TURING_EMAIL,
+                        "Name": FROM_NAME
                     },
                     "To":[
                         {
-                            "Email": "leonardo.murakami@usp.br",
-                            "Name": "Leonardo Murakami"
+                            "Email": TURING_EMAIL,
+                            "Name": TO_NAME
                         }
                     ],
                     "Subject": `[CONTATO SITE] ${motivation}`,
@@ -38,7 +41,7 @@ const sendEmail = function(name, email, entity, motivation, message){
         })
 };
 
-let getTodayDate = function(){
+const getTodayDate = function(){
     let today = new Date()
     let dd = String(today.getDate()).padStart(2, '0');
     let mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
