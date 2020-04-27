@@ -3,6 +3,7 @@ exports.up = function (knex) {
         table.increments('contactId').primary();
         table.string('contactName').notNullable();
         table.string('email').notNullable();
+        table.string('entity');
         table.string('motivation').notNullable();
         table.string('message').notNullable();
         table.string('date').notNullable();
