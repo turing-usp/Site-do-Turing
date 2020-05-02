@@ -45,9 +45,9 @@ export default function Projects () {
                     />
                 <button type='submit'>Pesquisar</button>
             </form>
-            <ul>
+            <ul class='ul_projects'>
                 {projects.map(project => (
-                    <li key={ project.projectId }>
+                    <li class='li_projects' key={ project.projectId }>
                         <strong>{project.description}</strong>
                         
                         <a href={project.githubRepo} >{project.githubRepo}</a>

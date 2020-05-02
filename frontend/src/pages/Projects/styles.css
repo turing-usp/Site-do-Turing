@@ -27,7 +27,7 @@ button{
     margin-left: 0.5em
 }
 
-ul {
+.ul_projects {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
     grid-auto-rows: 1fr;
@@ -38,7 +38,7 @@ ul {
     margin-right:3em;
 }
 
-ul li {
+.li_projects {
     background: #000a22;
     padding: 1.2em;
     border-radius: 30px;
