@@ -19,7 +19,18 @@ import RL_hover from '../../assets/RL_hover.png'
 import Cabecalho from '../../Tags/Cabecalho.js'
 import Rodape from '../../Tags/Rodape.js'
 
+import api from '../../services/api.js'
+
 export default function LearnAI () {
+
+
+    const [posts, setPosts] = useState([]);
+
+    useEffect(() => {
+        api.get('/listMediumPosts').then(response => {
+            setPosts(response.data.items);
+        });
+    }, []);
 
     const [showDesc, setShowDesc] = useState(true)
     const [showCV, setShowCV] = useState(false)
@@ -53,6 +64,7 @@ export default function LearnAI () {
                         de Konohagakure, além de ser a reencarnação atual de Indra. Ele se tornou um shinobi para que 
                         pudesse algum dia ficar forte o suficiente para se vingar contra o seu irmão mais velho, Itachi.
                     </div>
+  
                     <a class='link' href='https://stackoverflow.com/admin.php' target="_blank">
                         <img class='github_icon' src={GitHub_O} />
                     </a>
@@ -212,33 +224,16 @@ export default function LearnAI () {
             </div>
 
             <div class="medium">
-                <span class="titulo_arvore">Artigos do Medium</span>
-                <div class="medium_posts">
-                    <div class="post">
-                        <div class="medium_pic">
+                    <span class="titulo_arvore">Artigos do Medium</span>
+                    <ul class='medium_posts'>
+                    {posts.map(post => (
+                        <div class="post" key={post.guid}>
+                            <a href={post.guid} ><img class ='medium_pic' src={post.thumbnail} /></a>
+                            <div class='medium_title'>{post.title}</div>
                         </div>
-                        <div class="medium_title">
-                            Artigo #1
-                        </div>
-                    </div>
-                    <div class="post">
-                        <div class="medium_pic">
-                        </div>
-                        <div class="medium_title">
-                            Artigo #2
-                        </div>
-                    </div>
-                    <div class="post">
-                        <div class="medium_pic">
-                        </div>
-                        <div class="medium_title">
-                            Artigo #3
-                        </div>
-                    </div>
-                </div>
-                <button class="moreposts">Mais posts</button>
+                    ))}
+                    </ul>
             </div>
-
             <Rodape />
         </div>
     );
