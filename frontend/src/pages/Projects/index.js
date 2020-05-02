@@ -21,7 +21,7 @@ export default function Projects () {
         api.get(`projects?tags=${requestTag}`).then(response => {
             setProjects(response.data);
         })
-    });
+    }, [requestTag]);
 
     function handleSearch(e) {
         e.preventDefault();
@@ -45,12 +45,12 @@ export default function Projects () {
                     />
                 <button type='submit'>Pesquisar</button>
             </form>
-            <ul>
+            <ul class='ul_projects'>
                 {projects.map(project => (
-                    <li key={ project.projectId }>
+                    <li class='li_projects' key={ project.projectId }>
                         <strong>{project.description}</strong>
                         
-                        <a href={project.githubRepo} ><p>{project.githubRepo}</p></a>
+                        <a href={project.githubRepo} >{project.githubRepo}</a>
                         <strong>Tags: {project.tags}</strong>
                         <p>Feito por: {project.squad}</p>
                     </li>

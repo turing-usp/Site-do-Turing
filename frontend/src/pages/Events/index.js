@@ -7,18 +7,35 @@ import Cabecalho from '../../Tags/Cabecalho.js'
 import Rodape from '../../Tags/Rodape.js'
 
 export default function Events () {
+
+    async function handleMoreEvents() {
+    }
+
     return (
 
         <div class='container'>
             <Cabecalho />
-            <h1>Nossos Eventos</h1>
+            <div class='titulo_eventos'>Nossos Eventos</div>
             <p class='description'>
-                Sasuke Uchiha (うちはサスケ, Uchiha Sasuke) é um dos últimos membros sobreviventes do clã Uchiha de Konohagakure, além de ser a reencarnação atual de Indra. Ele se tornou um shinobi para que pudesse algum dia ficar forte o suficiente para se vingar contra o seu irmão mais velho, Itachi, que tinha massacrado todo o seu clã. Inicialmente, um membro do Time Kakashi de Konoha...
+                O Grupo Turing realiza eventos sendo alguns exclusivos<br />
+                à comunidade uspiana e outros abertos ao público externo.<br />
+                Veja alguns de nossos próximos eventos e eventos que já realizamos.<br />
             </p>
-            <h1>Próximos Eventos</h1>
-            <h1>Eventos Realizados</h1>
+            <div class='subtitulos'>Próximos Eventos</div>
+            <ul class='ul_events'>
+                    <li class='li_events'>fdsafds</li>
+                    <li class='li_events'>fsadfasdf</li>
+                    <li class='li_events'>fasdfasdf</li>
+                    <li class='li_events'>asdfasdf</li>   
+            </ul>
+            <div class='subtitulos'>Eventos Realizados</div>
+            <ul class='ul_events'>
+                    <li class='li_events'>fdsafds</li>
+                    <li class='li_events'>fsadfasdf</li>
+                    <li class='li_events'>fasdfasdf</li>
+            </ul>
             <div class="wrapper">
-                <button class='more_events_box'>
+                <button onClick={handleMoreEvents} class='more_events_box'>
                     Mais Eventos
                 </button>
             </div>
