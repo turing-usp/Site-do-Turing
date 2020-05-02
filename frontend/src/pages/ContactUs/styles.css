@@ -1,156 +1,214 @@
-
-/* FORMULARIO */
-.formulario {
-    text-align: center;
-    margin-top: 60px;
+.title_form {
+  font-size: 3em;
+  font-weight: 500;
+  color: #F2994A;
+  text-shadow: 0.03em 0.03em 0.03em gray;
 }
 
-/* Inputs gerais (nome, e-mail, etc.) */
-.entrada {
-    width: 50%;
-    padding: 20px;
-    margin: 0.5%;
-    box-sizing: border-box;
-    font-size: 15px;
-    border-radius: 20px;
-    border: 2px solid rgb(255, 255, 255);
-    background-color: rgb(255, 255, 255);  
-    color: rgb(0, 0, 0);
-  }
-  
-  .entrada:focus {
-    border: 2px solid rgb(255, 102, 0);
-    transition: 0.5s;
-  }  
-  
-  /* Caixa de texto/mensagem */
-  .mensagem {
-    width: 39%;
-    height: 130px;
-    padding: 20px;
-    margin: 0.5%;
-    font-size: 15px;
-    font: normal;
-    box-sizing: border-box;
-    border-radius: 30px;
-    border: 2px solid rgb(255, 255, 255);
-    background-color: rgb(255, 255, 255);
-    color: rgb(0, 0, 0);
-    resize: vertical;
-    font-family: Arial, Helvetica, sans-serif;
-    scrollbar-width: none;
-    -ms-overflow-style: none;
-  }
+.formulario {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2em;
+}
 
-  .mensagem:focus {
-    border: 2px solid rgb(30, 6, 139);
-    transition: 0.5s;
-  }  
+.container_entrada {
+  width: 70%;
+  align-self: center;
+  flex-direction: row;
+  align-items: center;
+  margin: 15px;
+}
 
-  /* Scrollbar da caixa de texto/mensagem */  
-  .mensagem::-webkit-scrollbar {
-    display: none;
-    width: 0px;
-    background: transparent;
-  }
-  
-  /* Botão enviar */
-  .enviar {
-    background-color: rgb(255, 102, 0);
-    border-radius: 30px;
-    border: none;
-    color: white;
-    font-size: 130%;
-    padding: 20px;
-    margin: 0.5%;
-    cursor: pointer;
-    transition: all 0.5s;
-    width: 10%;
-    padding-left: 1.5%;
-    vertical-align: top;
-  }
-  
-  .enviar:hover{
-    background-color: rgb(255, 51, 0);
-  }
-  
-  .enviar span {
-    cursor: pointer;
-    position: relative;
-    transition: 1s;
-  }
-  
-  .enviar span:after {
-    content: '\00bb';
-    position: absolute;
-    opacity: 0;
-    top: 0;
-    right: 30px;
-    transition: 0.5s;
-  }
-  
-  .enviar:hover span {
-    padding-right: 20px;
-  }
-  
-  .enviar:hover span:after {
-    opacity: 1;
-    right: 0;
-  }
+.entrada, .entrada_error {
+  width: 80%;
+  padding: 20px;
+  font-size: 15px;
+  margin-left: 10px;
+  border-radius: 20px;
+  border: 2px solid rgb(255, 255, 255);
+  background-color: rgb(255, 255, 255);  
+  color: rgb(0, 0, 0);
+  transition: 0.5s;
+}
 
+.entrada_error {
+  border: 2px solid #FF0000
+}
 
-/* FAQ */
+.entrada:focus {
+  border: 2px solid #F2994A;
+}
+
+.container_mensagem {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+  width: 70%;
+  margin: 15px;
+}
+
+.mensagem, .mensagem_error {
+  height: 130px;
+  margin-left: 10px;
+  width:62%;
+  padding: 20px;
+  margin-top: 15px;
+  box-sizing: border-box;
+  border-radius: 30px;
+  border: 2px solid rgb(255, 255, 255);
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  resize: vertical;
+  transition: 0.5s;
+  font-size: 15px;
+  font-family: Arial, Helvetica, sans-serif;
+
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.mensagem_error {
+  align-self: flex-end;
+  border: 2px solid #FF0000;
+}
+
+.mensagem:focus {
+  border: 2px solid #3b61b6
+}
+
+/* Scrollbar da caixa de mensagem */  
+.mensagem::-webkit-scrollbar {
+  display: none;
+  width: 0px;
+  background: transparent;
+}
+
+.text_error_entrada, .text_error_mensagem {
+  position: absolute;
+  left: 26%;
+  font-size: 12px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #FF0000;
+  margin-top: 5px;
+  margin-left: -2.5%;
+  animation: fadein 1s;
+}
+
+@keyframes fadein {
+  from {opacity: 0};
+  to {opacity: 1}
+}
+
+.text_error_mensagem {
+  margin-left: -2.5%;
+}
+
+.container_text_error_mensagem {
+  align-self: flex-end;
+}
+
+.enviar {
+  background-color: #F2994A;
+  width: 20%;
+  border-radius: 30px;
+  border: none;
+  color: white;
+  font-size: 130%;
+  padding: 20px;
+  cursor: pointer;
+  margin-left: 15px;
+  animation: fadein 2s;
+  transition: all 0.5s;
+}
+
+.enviar:hover{
+  background-color: rgb(255, 119, 0);
+}
+
+.enviar span {
+  cursor: pointer;
+  position: relative;
+  transition: 1s;
+}
+
+.enviar span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: 30px;
+  transition: 0.5s;
+}
+
+.enviar:hover span {
+  padding-right: 20px;
+}
+
+.enviar:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+.check {
+  width: 110px;
+  animation: fadein 3s;
+  transition: 1s;
+  margin-top: 15px;
+  margin-left: 11.8%;
+}
 
 
 .title_faqs{
-    margin-top:2em;
+  margin-top:2em;
 }
 
 .faq_box{
-    margin-top: 2em;
-    font-size: 2em;
-    color: #041846;
-    display: flex;
-    justify-content: space-between;
+  margin-top: 2em;
+  font-size: 2em;
+  color: #041846;
+  display: flex;
+  justify-content: space-between;
 }
 
 .btnAnswer{
-    background-color: none; /* Blue background */
-    background: 0em;
-    border: none; /* Remove borders */
-    cursor: pointer; /* Mouse pointer on hover */
+  background-color: none; /* Blue background */
+  background: 0em;
+  border: none; /* Remove borders */
+  cursor: pointer; /* Mouse pointer on hover */
 }
 
 .btnAnswer:active {
-    text-shadow: 0 5px #666;
-  }
+  text-shadow: 0 5px #666;
+}
 
 .faq_and_answer{
-    text-align: center;
-    margin: auto;
-    display:flex;
-    width: 50%;
-    flex-direction: column;
+  text-align: center;
+  margin: auto;
+  display:flex;
+  width: 50%;
+  flex-direction: column;
 }
 
 .answer{
-    font-size: 0.8em;
-    color: #041846;
-    opacity: 0.8;
+  font-size: 0.8em;
+  color: #041846;
+  opacity: 0.8;
 
 }
 .title_faqs{
-    font-size: 3em;
-    font-weight: 500;
-    color: #F2994A;
-    text-shadow: 0.03em 0.03em 0.03em gray;
-    text-align: center;
+  font-size: 3em;
+  font-weight: 500;
+  color: #F2994A;
+  text-shadow: 0.03em 0.03em 0.03em gray;
+  text-align: center;
 }
 .blue_line{
-    color: #041846;
-    background-color: #041846;
-    border: 0;
-    clear:both;
-    display:block;
-    width: 96%;   
+  color: #041846;
+  background-color: #041846;
+  border: 0;
+  clear:both;
+  display:block;
+  width: 96%;   
 }

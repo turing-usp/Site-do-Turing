@@ -25,6 +25,7 @@ export default function Homepage(){
                             mas o Naruto também cresceu sem pai...
                             </h1>
                         </div>
+                        <br />
                         <button class="saiba-mais" href="#">Saiba mais</button>
                     </div>
                     <Background>

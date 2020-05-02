@@ -1,5 +1,146 @@
+.areas_de_foco {
+    display: flex;
+    flex-direction: column;
+}
+
+.titulo_areas {
+    font-size: 3em;
+    font-weight: 500;
+    color: #F2994A;
+    text-shadow: 0.03em 0.03em 0.03em gray;
+    animation: fadein 1s;
+}
+
+@keyframes fadein {
+    from {opacity:0};
+    to {opacity: 1};
+}
+
+.caixa_area {
+    display: flex;
+    flex-direction: row;
+    border-radius: 3em;
+    color: rgb(68, 68, 68);
+    margin: 1em auto;
+    width: 60%;
+    background-color: #d9f0fc;
+    animation: fadein 1s;
+}
+
+.texto_area {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.github_icon, .link {
+    flex: 0 0 auto;
+    align-self: center;
+    padding-right: 30px;
+    width: 64px;
+}
+
+.hexagonos_area {
+    margin: 3em auto;
+}
+
+.hexagonos_linha1 {
+    display: grid;
+    grid-template-columns: repeat(3, 280px);
+    grid-template-rows: 230px;
+    justify-content: center;
+    place-items: center;
+}
+
+.hexagonos_linha2 {
+    display: grid;
+    grid-template-columns: repeat(2, 280px);
+    justify-content: center;
+    place-items: center;
+}
+
+/* 
+Hexágono: sobreposição de três retângulos.
+
+Retângulo principal (.hexagon)
+Controla a rotação do hexágono como um todo
+Delimita a largura do hexágono (os dois lados verticais)
+ */
+ .hexagon {
+    overflow: hidden;
+    visibility: hidden;
+    width: 520px;
+    height: 260px;
+    margin-left: -20;
+
+    -webkit-transform: rotate(90deg);
+       -moz-transform: rotate(90deg);
+        -ms-transform: rotate(90deg);
+         -o-transform: rotate(90deg);
+            transform: rotate(90deg);
+}
+
+/*
+Retângulo interno 1 (.hexagon-in1)
+Delimita o lado superior direito e o inferior esquerdo
+ */
+.hexagon-in1 {    
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    visibility: hidden;
+
+    -webkit-transform: rotate(120deg);
+       -moz-transform: rotate(120deg);
+        -ms-transform: rotate(120deg);
+         -o-transform: rotate(120deg);
+            transform: rotate(120deg);
+}
+
+/*
+Retângulo interno 2 (.hexagon-in2)
+Delimita o lado superior esquerdo e o inferior direito
+*/
+.hexagon-in2 {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    visibility: hidden;
+
+    -webkit-transform: rotate(120deg);
+       -moz-transform: rotate(120deg);
+        -ms-transform: rotate(120deg);
+         -o-transform: rotate(120deg);
+            transform: rotate(120deg);
+}
+
+.img_area, .img_area_overlay {
+    visibility: visible;
+    position: absolute;
+    width: 260px;
+    top: -20px;    
+    cursor: pointer;
+    
+    -webkit-transform: rotate(30deg);
+       -moz-transform: rotate(30deg);
+        -ms-transform: rotate(30deg);
+         -o-transform: rotate(30deg);
+            transform: rotate(30deg);
+}
+
+.img_area_overlay {
+    position: relative;
+    filter: opacity(0);
+    transition: 0.5s;
+}
+
+.img_area_overlay:hover {
+    filter: opacity(1);
+}
+
+
 .arvore_de_habilidades{
-    margin-top: 4em;
     display: flex;
     flex-direction: column;
 }
