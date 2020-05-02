@@ -45,28 +45,36 @@
 }
 
 .medium_posts{
-    margin-top: 2em;
-    display: flex;
-    margin-left: auto;
-    margin-right: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 1fr;
+    align-self: center;
+    gap: 2em;
+    list-style: none;
+    justify-content:center;
+    margin-right:3em;
 }
 .post{
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    margin-left: 2em;
+    background: #000a22;
+    padding: 1.2em;
+    border-radius: 30px;
+    position: relative;
+    justify-content: space-between;
+    display:flex;
+    flex-direction: column
 }
 
 .medium_pic{
     border-radius: 0.5em;
     height: 12em;
     width: 15em;
-    background-color: #598759;
 }
 
 .medium_title{
-    margin-top: 0.5em;
-    color: #001111;
+    text-align: center;
+    color: #f77801;
+    text-shadow: 0.01em 0.01em 0.01em gray;
+    font-size: 1em;
     font-family: Open Sans;
 }
 
