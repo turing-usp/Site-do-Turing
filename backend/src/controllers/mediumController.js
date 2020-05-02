@@ -20,7 +20,7 @@ function removeDescription(json){
 module.exports = {
   async index(request, response) {
     // allow for usage with any user (if any other use is defined), defaults to turing-talks
-    var { user='turing-talks', page=1 } = request.query;
+    var { user='turing-talks', page=1, itemPerPage=10 } = request.query;
     // create the default request url, separated so it can be changed if necessary
     // utilizes the rss2json's api to convert mediums feed to a json
     let mediumRssUrl = `https://medium.com/feed/${user}`;
@@ -28,7 +28,7 @@ module.exports = {
     // fetch and remove content/description of response to use less memory
     let apiResponse = httpGetFromApi(rss2jsonUrl);
     let cleanJson = removeDescription(apiResponse);
-    cleanJson['items'] = cleanJson['items'].slice((page-1)*3,(page-1)*3+3)
+    cleanJson['items'] = cleanJson['items'].slice((page-1)*itemPerPage,(page-1)*3+itemPerPage)
     return response.json(cleanJson);
   },
 };
