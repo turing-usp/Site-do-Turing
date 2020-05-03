@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef } from "react";
+import React, { useEffect, useState } from "react";
 import ReactDOM from 'react-dom';
 import logo from '../../assets/logo.png';
 import './styles.css';
@@ -109,12 +109,27 @@ export default function ContactUs () {
         validateMensagem(mensagem)
     }
 
-    const [numeroFaq, setNumero] = useState(2);
 
-    var i;
+    const faqs = getFaqs()
+    const [questionNumber, setQuestionNumber] = useState(null)
+  
+    function showAnswer(index) {
+      setQuestionNumber(questionNumber === index ? null : index);
+    }
 
-    const [show1, setExpand1] = useState(false);
-    const [show2, setExpand2] = useState(false);
+    function getFaqs() {
+        const faqs = [
+          {
+            question: 'O Sibuya está solteiro?',
+            answer: 'Sibuya está solteiro não, minha filha'
+          },
+          {
+            question: 'Quanto custa essa escola?',
+            answer: '2000 reais o segundo de aula'
+          }
+        ];
+        return faqs;
+      }
 
     return (
         <div class='container'>
@@ -180,32 +195,18 @@ export default function ContactUs () {
             <div class="faq_and_answer">
                 <span class="title_faqs">FAQs</span>
                 <div class= "faq_box">
-                <span class= "question">O Sibuya está solteiro?</span>
-                    <button class = "btnAnswer" onClick={()=>{setExpand1(!show1)}}>
-                    <FiPlus size={30} color="#F2994A"/>
-                    </button>
+                {faqs.map(({question, answer}, index) => (
+                    <div>
+                    <div class='question_and_btn'>
+                        <p class='question' onClick={() => showAnswer(index)}>{question}</p>
+                        <button class="btnAnswer" onClick={() => showAnswer(index)}>
+                            <FiPlus size={30} color="#F2994A"/>
+                        </button>
+                    </div>
+                    <p class={`answer${questionNumber === index ? '_show' : '_hidden'}`}>{answer}</p>
+                    </div>
+                ))}
                 </div>
-                <div>
-                    {
-                        show1? <div class="answer"><h1>Sibuya está solteiro não, minha filha</h1></div> : null
-                    }
-                </div>
-                <hr class="blue_line"/>
-            </div>
-
-            <div class="faq_and_answer">
-                <div class= "faq_box">
-                <span class= "question">Quanto custa essa escola?</span>
-                    <button class = "btnAnswer" onClick={()=>{setExpand2(!show2)}}>
-                    <FiPlus size={30} color="#F2994A"/>
-                    </button>
-                </div>
-                <div>
-                    {
-                        show2? <div class="answer"><h1>2000 reais o segundo de aula</h1></div> : null
-                    }
-                </div>
-                <hr class="blue_line"/>
             </div>
             <Rodape />
         </div>
