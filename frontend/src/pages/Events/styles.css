@@ -63,7 +63,6 @@ button:active{
 }
 
 .li_events{
-    background: #000a22;
     padding: 1.2em;
     border-radius: 30px;
     position: relative;
@@ -71,4 +70,16 @@ button:active{
     display:flex;
     flex-direction: column;
     color: #F5761D;
+}
+
+.event-img{
+    width: 16em;
+    height: 9em;
+    border-radius: 30px;
+    transition: 0.2s;
+}
+
+.event-img:hover{
+    transform: scale(1.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }

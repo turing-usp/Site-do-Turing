@@ -227,10 +227,10 @@ export default function LearnAI () {
                     <span class="titulo_arvore">Artigos do Medium</span>
                     <ul class='medium_posts'>
                     {posts.map(post => (
-                        <div class="post" key={post.guid}>
-                            <a href={post.guid} ><img class ='medium_pic' src={post.thumbnail} /></a>
+                        <a class='post' href={post.guid} key={post.guid}>
+                            <img class ='medium_pic' src={post.thumbnail} />
                             <div class='medium_title'>{post.title}</div>
-                        </div>
+                        </a>
                     ))}
                     </ul>
             </div>

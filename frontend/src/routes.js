@@ -8,7 +8,7 @@ import AboutUs from './pages/AboutUs';
 import Events from './pages/Events';
 import Projects from './pages/Projects';
 import LearnAI from './pages/LearnAI';
-import ContactUs from './pages/ContactUs';
+//import ContactUs from './pages/ContactUs';
 
 export default function Routes(){
     return (
@@ -20,8 +20,11 @@ export default function Routes(){
                 <Route path="/events" exact component={Events} />
                 <Route path="/projects" exact component={Projects} />
                 <Route path="/learnai" exact component={LearnAI} />
-                <Route path="/contactus" exact component={ContactUs} />
+    
             </Switch>
         </BrowserRouter>
     )
 }
+
+// Linha removida
+//<Route path="/contactus" exact component={ContactUs} />

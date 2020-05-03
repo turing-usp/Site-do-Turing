@@ -2,9 +2,9 @@ const connection = require('../database/connection');
 
 module.exports = {
     async create(request, response){
-        const {name, date} = request.body;
+        const {name, date, link, img, realizado} = request.body;
         await connection('events').insert({
-            name, date
+            name, date, link, img, realizado
         });
 
         return response.json({
@@ -14,7 +14,9 @@ module.exports = {
     },
 
     async index(request, response){
-            const events = await connection('events').select('  *');
+            const {realizado = 'nao'} = request.query;
+            const events = await connection('events').where('realizado', realizado).select('*');
             return response.json(events)
-    }
+    },
+
 }

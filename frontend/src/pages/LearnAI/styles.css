@@ -196,7 +196,6 @@ Delimita o lado superior esquerdo e o inferior direito
     margin-right:3em;
 }
 .post{
-    background: #000a22;
     padding: 1.2em;
     border-radius: 30px;
     position: relative;
@@ -206,29 +205,17 @@ Delimita o lado superior esquerdo e o inferior direito
 }
 
 .medium_pic{
-    border-radius: 0.5em;
-    height: 12em;
-    width: 15em;
+    border-radius: 30px;
+    height: 10.8em;
+    width: 19.2em;
+    align-self: center;
 }
 
 .medium_title{
+    text-transform: uppercase;
     text-align: center;
-    color: #f77801;
+    color: #F2994A;
     text-shadow: 0.01em 0.01em 0.01em gray;
     font-size: 1em;
     font-family: Open Sans;
-}
-
-.moreposts{
-    margin-top: 1em;
-    background-color: #F2994A;
-    color: #ffffff;
-    text-align: center;
-    width: 10em;
-    font-size: large;
-    font-weight: bold;
-    font-family: Open Sans;
-    border-radius: 1em;
-    margin-left: auto;
-    margin-right: auto;
 }
