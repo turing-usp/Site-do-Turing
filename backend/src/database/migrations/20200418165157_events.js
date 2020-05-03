@@ -4,6 +4,9 @@ exports.up = function(knex) {
       table.increments('eventId').primary();
       table.string('name').notNullable();
       table.string('date').notNullable();
+      table.string('link');
+      table.string('img');
+      table.string('realizado').notNullable();
   })
 };
 
