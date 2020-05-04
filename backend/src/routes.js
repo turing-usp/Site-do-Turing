@@ -7,7 +7,7 @@ const mediumController = require('./controllers/mediumController');
 const faqController = require('./controllers/faqController');
 const eventsController = require('./controllers/eventsController');
 const projectsController = require('./controllers/projectsController');
-//const formsController = require('./controllers/formsController.js')
+const formsController = require('./controllers/formsController.js')
 
 routes.get('/members', membersController.index);
 routes.post('/members', membersController.create);
