@@ -11,8 +11,8 @@ const projectsController = require('./controllers/projectsController');
 
 routes.get('/members', membersController.index);
 routes.post('/members', membersController.create);
-//routes.get('/sendContact', formsController.index);
-//routes.post('/sendContact', formsController.create);
+routes.get('/sendContact', formsController.index);
+routes.post('/sendContact', formsController.create);
 routes.get('/listMediumPosts', mediumController.index);
 routes.post('/faq', faqController.create);
 routes.get('/faq', faqController.index);
