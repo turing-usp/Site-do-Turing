@@ -12,7 +12,19 @@ import Cabecalho from '../../Tags/Cabecalho.js'
 import Rodape from '../../Tags/Rodape.js'
 
 
+import api from '../../services/api.js'
+
+
 export default function ContactUs () {
+
+
+    /* Estados */
+
+
+
+
+    /* Estados Forms */
+
 
     const [nome, setNome] = useState('')
     const [email, setEmail] = useState('')
@@ -28,7 +40,27 @@ export default function ContactUs () {
     const [submited, setSubmited] = useState(false)
     const [validated, setValidated] = useState(false)
 
+
+    /* Estados Faqs */
+
+
+    const [faqs, setFaqs] = useState([])
+    const [questionNumber, setQuestionNumber] = useState(null)
+  
+
+
+        /** Integrações **/
+
+
+
     useEffect (() => {
+
+
+
+        /** Integração forms **/
+
+
+
         if (submited &&
             !errorNome &&
             !errorEmail &&
@@ -56,8 +88,32 @@ export default function ContactUs () {
             }, 3000)
             
             setSubmited(false)
-        }
+        };
+
+
+
+        /** Integração Faqs **/
+
+
+
+        api.get('/faq').then(response => {
+            setFaqs(response.data);
+        });
+
+
     }, [submited, errorNome, errorEmail, errorAssunto, errorMensagem])
+
+
+
+    /*** Funções ***/
+
+
+
+
+
+    /***  Funções Forms ***/
+
+
 
     function validateNome(nome) {
         if (!nome) {
@@ -110,30 +166,30 @@ export default function ContactUs () {
     }
 
 
-    const faqs = getFaqs()
-    const [questionNumber, setQuestionNumber] = useState(null)
-  
+
+    /*** Funções Faqs ***/
+
+
+
     function showAnswer(index) {
       setQuestionNumber(questionNumber === index ? null : index);
     }
 
-    function getFaqs() {
-        const faqs = [
-          {
-            question: 'O Sibuya está solteiro?',
-            answer: 'Sibuya está solteiro não, minha filha'
-          },
-          {
-            question: 'Quanto custa essa escola?',
-            answer: '2000 reais o segundo de aula'
-          }
-        ];
-        return faqs;
-      }
+
+    /************/
+    /*          */
+    /*  Página  */
+    /*          */
+    /************/
+
 
     return (
         <div class='container'>
             <Cabecalho />
+
+
+            {/* Forms */}
+
 
             <span class="title_form">Contato</span>
             <form class='formulario'>
@@ -191,6 +247,11 @@ export default function ContactUs () {
                     </div>
                 </div>
             </form>
+
+
+            {/* Faqs */}
+
+
 
             <div class="faq_and_answer">
                 <span class="title_faqs">FAQs</span>

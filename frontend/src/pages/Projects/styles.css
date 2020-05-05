@@ -31,7 +31,7 @@ button{
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
     grid-auto-rows: 1fr;
-    align-self: center;
+    align-self: stretch;
     gap: 2em;
     list-style: none;
     justify-content:center;

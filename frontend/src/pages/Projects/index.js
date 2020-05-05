@@ -50,7 +50,7 @@ export default function Projects () {
                     <li class='li_projects' key={ project.projectId }>
                         <strong>{project.description}</strong>
                         
-                        <a href={project.githubRepo} >{project.githubRepo}</a>
+                        <a target='_blank' href={project.githubRepo} >{project.githubRepo}</a>
                         <strong>Tags: {project.tags}</strong>
                         <p>Feito por: {project.squad}</p>
                     </li>
