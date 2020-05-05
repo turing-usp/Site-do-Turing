@@ -14,9 +14,10 @@ module.exports = {
     },
 
     async index(request, response){
-            const {realizado = 'nao'} = request.query;
-            const events = await connection('events').where('realizado', realizado).select('*');
-            return response.json(events)
+        const {limit = 'all'} = request.query;
+        const {realizado = 'nao'} = request.query;
+        const events = await connection('events').where('realizado', realizado).limit(limit).select('*');
+        return response.json(events)
     },
 
 }

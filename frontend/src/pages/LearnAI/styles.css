@@ -182,19 +182,20 @@ Delimita o lado superior esquerdo e o inferior direito
 .medium{
     margin-top: 4em;
     display: flex;
+    width: 100%;
     flex-direction: column;
 }
 
 .medium_posts{
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
     grid-auto-rows: 1fr;
-    align-self: center;
+    align-self: stretch;
     gap: 2em;
     list-style: none;
     justify-content:center;
-    margin-right:3em;
 }
+
 .post{
     padding: 1.2em;
     border-radius: 30px;
@@ -206,8 +207,8 @@ Delimita o lado superior esquerdo e o inferior direito
 
 .medium_pic{
     border-radius: 30px;
-    height: 10.8em;
-    width: 19.2em;
+    width: 100%;
+    height: 200px;
     align-self: center;
 }
 
