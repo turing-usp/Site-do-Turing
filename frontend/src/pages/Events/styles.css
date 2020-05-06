@@ -43,14 +43,15 @@
 }
     
 
-button::-moz-focus-inner {
+.more_events_box button ::-moz-focus-inner {
     border: 0;
   }
   
   
-button:active{
+.more_events_box button:active{
     outline: 0;
 }
+
 .ul_events {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));

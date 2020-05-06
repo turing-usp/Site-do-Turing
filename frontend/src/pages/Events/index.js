@@ -72,7 +72,7 @@ export default function Events () {
                 ))}
             </ul>
             <div class="wrapper">
-                {showButton && <button onClick={handleMoreEvents} class='more_events_box'>
+                {showButton && <button class='more_events_box' onClick={handleMoreEvents}>
                     Mais Eventos
                 </button>}
             </div>
