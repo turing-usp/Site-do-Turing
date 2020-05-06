@@ -22,23 +22,13 @@ html, body {
 /* Estilização do Cabeçalho */
 /****************************/
 
-  .rect_cabecalho_ghost {
-    width: 100%;
-    height: 8em;
-    background: #041846;
-    display: flex;
-    justify-content: space-between;
-    font-size: 16px;
-    top:0;
-}
 .cabecalho_logo{
-    margin-left: 5em
+    margin-left: 3vw
 }
 .text_cabecalho {
     text-transform: uppercase;
     font-size: 1.5em;
-    margin-top: 2em;
-    margin-right: 2em;
+    margin-right: 3vw;
     color: #EAF7FB;
     text-decoration: none
 }
@@ -57,7 +47,7 @@ html, body {
     box-shadow: 0px 0.2em 0.2em rgba(0, 0, 0, 0.25);
     display: flex;
     justify-content: space-between;
-    align-items: start;
+    align-items: center;
 }
 
 
@@ -88,25 +78,23 @@ a:visited {
 
 .rodape {
     width: 100%;
-    height: 10%;
     background: #041846;
     display: flex;
     justify-content: space-between;
-    margin-top: 100px
+    margin-top: 100px;
+    align-items: center
 }
 .rodape_logo2{
-    margin-left: 72px;
-    margin-top: 60px;
+    padding: 3vw;
     width: 217px;
     height: 81px
 }
 .rodape_social{
-    margin-top: 30px;
+    padding: 1vw;
     text-align: center
 }
 .rodape_social_box{
     width: 100%;
-    height: 28px;
     background: #F5761D;
     border-radius: 30px;
     text-align: center;
@@ -132,10 +120,9 @@ a:visited {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5)
 }
 .location {
+    padding: 1vw;
     text-align: left;
     font-family: 'Open Sans';
-    margin-right: 61px;
-    margin-top: 30px;
     font-weight: bold;
     font-style: normal;
     font-size: 18px;

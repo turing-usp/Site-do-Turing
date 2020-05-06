@@ -27,6 +27,11 @@ button{
     margin-left: 0.5em
 }
 
+@keyframes fadein {
+    from {opacity:0};
+    to {opacity: 1};
+}
+
 .ul_projects {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
@@ -36,6 +41,7 @@ button{
     list-style: none;
     justify-content:center;
     margin-right:3em;
+    animation: fadein 1s;
 }
 
 .li_projects {
@@ -45,7 +51,8 @@ button{
     position: relative;
     justify-content: space-between;
     display:flex;
-    flex-direction: column
+    flex-direction: column;
+    animation: fadein 1s;
 }
 ul li strong {
     display: inline-block;

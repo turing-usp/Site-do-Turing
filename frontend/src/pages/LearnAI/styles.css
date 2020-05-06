@@ -42,20 +42,20 @@
 }
 
 .hexagonos_area {
-    margin: 3em auto;
+    margin: 3em auto auto auto;
 }
 
 .hexagonos_linha1 {
     display: grid;
-    grid-template-columns: repeat(3, 280px);
-    grid-template-rows: 230px;
+    grid-template-columns: repeat(3, 140px);
+    grid-template-rows: 115px;
     justify-content: center;
     place-items: center;
 }
 
 .hexagonos_linha2 {
     display: grid;
-    grid-template-columns: repeat(2, 280px);
+    grid-template-columns: repeat(2, 140px);
     justify-content: center;
     place-items: center;
 }
@@ -70,8 +70,8 @@ Delimita a largura do hexágono (os dois lados verticais)
  .hexagon {
     overflow: hidden;
     visibility: hidden;
-    width: 520px;
-    height: 260px;
+    width: 260px;
+    height: 130px;
     margin-left: -20;
 
     -webkit-transform: rotate(90deg);
@@ -118,8 +118,8 @@ Delimita o lado superior esquerdo e o inferior direito
 .img_area, .img_area_overlay {
     visibility: visible;
     position: absolute;
-    width: 260px;
-    top: -20px;    
+    width: 130px;
+    top: -10px;    
     cursor: pointer;
     
     -webkit-transform: rotate(30deg);
@@ -160,8 +160,8 @@ Delimita o lado superior esquerdo e o inferior direito
 .coggle{
     margin-left: auto;
     margin-right: auto;
-    width: 60em;
-    height: 25em;
+    width: 80vw;
+    height: 34vw;
 }
 
 .arvore_coggle{
