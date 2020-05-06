@@ -111,12 +111,12 @@
 
 .enviar {
   background-color: #F2994A;
-  width: 20%;
+  width: 13.5vw;
   border-radius: 30px;
   border: none;
   color: white;
-  font-size: 130%;
-  padding: 20px;
+  font-size: 1.9vw;
+  padding: 1.8vw;
   cursor: pointer;
   margin-left: 15px;
   animation: fadein 2s;

@@ -18,7 +18,7 @@ function Rodape() {
                     <p class='rodape_social_box'>Siga-nos nas redes sociais</p>
                 <br/>
                 <a target='_blank'href='https://www.instagram.com/grupoturing.usp/'><img src={insta} class="link_rodape"/></a>
-                <a target='_blank'href='https://pt-br.facebook.com/grupoturing.poliusp/'><img src={fb} class="link_rodape"/></a>
+                <a target='_blank'href='https://pt-br.facebook.com/grupoturing.usp/'><img src={fb} class="link_rodape"/></a>
                 <a target='_blank'href='https://www.youtube.com/channel/UCIZSLh8_ST5np3k60qWOiAA'><img src={yt} class="link_rodape"/></a>
                 <a target='_blank'href='https://medium.com/turing-talks'><img src={medium} class="link_rodape"/></a>
                 <a target='_blank'href='https://github.com/GrupoTuringCodes'><img src={github} class="link_rodape"/></a>
