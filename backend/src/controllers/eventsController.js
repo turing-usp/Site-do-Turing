@@ -33,7 +33,7 @@ module.exports = {
         });
         return response.json({
             "EventId": eventId,
-            'Status': 'Updated'
+            'status': 'Updated'
         })
     },
 
@@ -44,7 +44,7 @@ module.exports = {
 
         return response.json({
             'EventId': eventId,
-            'Status': 'Deleted'
+            'status': 'Deleted'
         })
     }
 
