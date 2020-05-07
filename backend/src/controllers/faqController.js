@@ -28,7 +28,7 @@ module.exports = {
         });
         return response.json({
             "questionId": questionId,
-            'Status': 'Updated'
+            'status': 'Updated'
         })
     },
 
@@ -39,7 +39,7 @@ module.exports = {
 
         return response.json({
             'questionId': questionId,
-            'Status': 'Deleted'
+            'status': 'Deleted'
         })
     }
 }
