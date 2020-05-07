@@ -14,7 +14,8 @@
     font-family: Open Sans;
     margin-bottom:2.5em
 }
-button{
+
+.button_projects {
     background-color: #F2994A;
     color: #ffffff;
     text-align: center;

@@ -45,7 +45,7 @@ export default function Projects () {
                         value={tag}
                         onChange={e => setTag(e.target.value)}
                     />
-                <button type='submit'><FiSearch /> Pesquisar</button>
+                <button class = "button_projects"type='submit'><FiSearch /> Pesquisar</button>
             </form>
             <ul class='ul_projects'>
                 {projects.map(project => (
