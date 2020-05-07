@@ -35,7 +35,7 @@ module.exports = {
         
         return response.json({
             "projectId": projectId,
-            'Status': 'Updated'
+            'status': 'Updated'
         })
     },
 
@@ -46,7 +46,7 @@ module.exports = {
 
         return response.json({
             'projectId': projectId,
-            'Status': 'Deleted'
+            'status': 'Deleted'
         })
     }
 }
