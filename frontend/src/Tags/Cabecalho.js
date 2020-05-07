@@ -1,53 +1,40 @@
 import React, { useEffect, useState } from "react";
+import WindowSizeListener from 'react-window-size-listener'
 import ReactDOM from 'react-dom';
 import {Link} from 'react-router-dom';
 import logo from '../assets/logo.png';
 import {FiMenu} from 'react-icons/fi';
 
 function Cabecalho () {
-    const [isSmall, setSmall] = useState(false);
+    const [width, setWidth] = useState(window.innerWidth > 700)
     const [isVisible, setVisible] = useState(false);
 
     const toggleNav = () => {
         setVisible(!isVisible);
-        window.location.reload();
-    };
-
-    const handleMediaQueryChange = mediaQuery => {
-        if(mediaQuery.matches){
-            setSmall(true);
-        } else {
-            setSmall(false);
-        }
-    }
-
+    };   
+    
     useEffect(() => {
-                const mediaQuery = window.matchMedia("(max-width: 700px)");
-                mediaQuery.addListener(handleMediaQueryChange);
-
-                return () => {
-                    mediaQuery.removeListener(handleMediaQueryChange);
-                };
-            },[]);
+        if (typeof window === 'undefined') return;
+      
+        const handleResize = () => setWidth(window.innerWidth > 700);
+        window.addEventListener('resize', handleResize);
+        return () => {
+          window.removeEventListener('resize', handleResize)
+        };
+      });
 
 
     return (
         <div class= "rect_cabecalho">
-            {!isSmall && (
-                <Link to='/'><img class = "cabecalho_logo" src={logo} alt="turing" /></Link> 
-            )}
-            {/* Botão do menu pequeno, se a tela for pequena*/}
-            {isSmall && (
                 <div class="turingebotao">
                 <button  class= "menu_btn"onClick={toggleNav}>
-                <FiMenu size={15} color="#F2994A"/>
+                    <FiMenu size={15} color="#F2994A"/>
                 </button> 
                 <Link to='/'><img class = "cabecalho_logo" src={logo} alt="turing" /></Link> 
                 </div> 
-            )}
             
             
-            {(!isSmall || isVisible) && (
+            {(isVisible || width) && (
             <div class="rotas_site">
                 <span class="text_cabecalho"><Link to='AboutUs'>Quem somos</Link></span>
                 <span class="text_cabecalho"><Link to='Events'>Eventos</Link></span> 
@@ -56,7 +43,6 @@ function Cabecalho () {
                 <span class="text_cabecalho"><Link to='ContactUs'>Fale Conosco</Link></span>
             </div>
             )}
-
         </div>
     );
 }
