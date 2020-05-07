@@ -36,7 +36,7 @@ module.exports = {
         
         return response.json({
             "memberId": memberId,
-            'Status': 'Updated'
+            'status': 'Updated'
         })
     },
 
@@ -47,7 +47,7 @@ module.exports = {
 
         return response.json({
             'memberId': memberId,
-            'Status': 'Deleted'
+            'status': 'Deleted'
         })
     }
 }
