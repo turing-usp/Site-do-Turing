@@ -9,15 +9,35 @@ const eventsController = require('./controllers/eventsController');
 const projectsController = require('./controllers/projectsController');
 const formsController = require('./controllers/formsController.js')
 
+// GET methods
 routes.get('/members', membersController.index);
-routes.post('/members', membersController.create);
 routes.get('/sendContact', formsController.index);
-routes.post('/sendContact', formsController.create);
 routes.get('/listMediumPosts', mediumController.index);
-routes.post('/faq', faqController.create);
 routes.get('/faq', faqController.index);
-routes.post('/events', eventsController.create);
 routes.get('/events', eventsController.index);
-routes.post('/projects', projectsController.create);
 routes.get('/projects', projectsController.index);
+
+// POST methods
+routes.post('/members', membersController.create);
+routes.post('/sendContact', formsController.create);
+routes.post('/faq', faqController.create);
+routes.post('/events', eventsController.create);
+routes.post('/projects', projectsController.create);
+
+// PUT methods
+routes.put('/members', membersController.update);
+routes.put('/sendContact', formsController.update);
+routes.put('/faq', faqController.update);
+routes.put('/events', eventsController.update);
+routes.put('/projects', projectsController.update);
+
+// DELETE methods
+routes.delete('/members', membersController.del);
+routes.delete('/sendContact', formsController.del);
+routes.delete('/faq', faqController.del);
+routes.delete('/events', eventsController.del);
+routes.delete('/projects', projectsController.del);
+
+
+
 module.exports = routes;

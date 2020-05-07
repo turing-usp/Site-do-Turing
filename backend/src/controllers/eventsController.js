@@ -20,4 +20,32 @@ module.exports = {
         return response.json(events)
     },
 
+    async update(request, response){
+        const {eventId} = request.query;
+        const {name, date, link, img, realizado} = request.body;
+        
+        const events = await connection('events').where('eventId', eventId).limit(1).select('*').update({
+            'name': name,
+            'date': date,
+            'link': link,
+            'img': img,
+            'realizado': realizado
+        });
+        return response.json({
+            "EventId": eventId,
+            'Status': 'Updated'
+        })
+    },
+
+    async del(request, response){
+        const {eventId} = request.query;
+
+        const events = await connection('events').where('eventId', eventId).del();
+
+        return response.json({
+            'EventId': eventId,
+            'Status': 'Deleted'
+        })
+    }
+
 }

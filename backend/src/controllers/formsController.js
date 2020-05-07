@@ -72,5 +72,33 @@ module.exports = {
     async index(request, response){
         const forms = await connection('externalContacts').select('*');
         return response.json(forms)
+    },
+    
+    async update(request, response){
+        const {contactId} = request.query;
+        const {email, entity, motivation, message, date} = request.body;
+        
+        const events = await connection('externalContacts').where('contactId', contactId).limit(1).select('*').update({
+            'email': email,
+            'entity': entity,
+            'motivation': motivation,
+            'message': message,
+            'date': date
+        });
+        return response.json({
+            "contactId": contactId,
+            'Status': 'Updated'
+        })
+    },
+
+    async del(request, response){
+        const {contactId} = request.query;
+
+        const events = await connection('externalContacts').where('contactId', contactId).del();
+
+        return response.json({
+            'contactId': contactId,
+            'Status': 'Deleted'
+        })
     }
 }
