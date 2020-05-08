@@ -16,5 +16,30 @@ module.exports = {
     async index(request, response){
             const questions = await connection('faq').select('*');
             return response.json(questions)
+    },
+
+    async update(request, response){
+        const {questionId} = request.query;
+        const {question, answer} = request.body;
+        
+        const events = await connection('faq').where('questionId', questionId).limit(1).select('*').update({
+            'question': question,
+            'answer': answer
+        });
+        return response.json({
+            "questionId": questionId,
+            'status': 'Updated'
+        })
+    },
+
+    async del(request, response){
+        const {questionId} = request.query;
+
+        const events = await connection('faq').where('questionId', questionId).del();
+
+        return response.json({
+            'questionId': questionId,
+            'status': 'Deleted'
+        })
     }
 }
