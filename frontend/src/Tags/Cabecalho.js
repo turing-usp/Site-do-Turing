@@ -16,7 +16,7 @@ function Cabecalho () {
     useEffect(() => {
         if (typeof window === 'undefined') return;
       
-        const handleResize = () => setWidth(window.innerWidth > 700);
+        const handleResize = () => setWidth(window.innerWidth > 800);
         window.addEventListener('resize', handleResize);
         return () => {
           window.removeEventListener('resize', handleResize)

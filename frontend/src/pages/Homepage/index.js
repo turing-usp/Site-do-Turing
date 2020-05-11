@@ -16,7 +16,7 @@ export default function Homepage(){
     return(
         <div class='homepage_container'>
             <Cabecalho />
-                <Parallax style={{marginTop: "7.95em"}}
+                <Parallax style={{marginTop: "7.95vw"}}
                 strength={250}>
                     <div style={{height: '60vw', width: '100%'}}>
                         <div class="caixa-superior">

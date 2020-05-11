@@ -90,3 +90,14 @@
     justify-content: space-evenly;
     align-items: center;
 }
+
+@media (max-width: 800px){
+    .parallax_img img{
+        max-width: 100%;
+        min-height: 300vh;
+    }
+    .parallax_img {
+        width: 100vw;
+    
+    }
+}
