@@ -14,8 +14,8 @@ html, body {
 }
 
 .container{
-    margin-top: 10em;
-    font-size: 18px;
+    margin-top: 3vw;
+    font-size: 2vw;
 }
 
 /****************************/
@@ -64,14 +64,20 @@ html, body {
     display: flex;
     flex-direction: row;
 }
-@media (max-width: 700px){
+@media (max-width: 800px){
     .menu_btn{
         display: inline;
         background-color: #041846;
         margin-left: 0vw;
         border: none;
-        height: 8vw;
+        height: 15vw;
         cursor: pointer;
+    }
+
+    .cabecalho_logo{
+        margin-left: 3vw;
+        height: 15vw;
+        width: auto;
     }
 
     .text_cabecalho {
@@ -92,7 +98,7 @@ html, body {
         z-index:300;
         width: 100%;
         position: fixed;
-        height: 8vw;
+        height: 15vw;
         background: #041846;
         box-shadow: 0px 0.2em 0.2em rgba(0, 0, 0, 0.25);
         display: flex;
@@ -142,8 +148,8 @@ a:visited {
 }
 .rodape_logo2{
     padding: 3vw;
-    width: 217px;
-    height: 81px
+    width: auto;
+    height: 8vw;
 }
 .rodape_social{
     padding: 1vw;
@@ -157,19 +163,19 @@ a:visited {
     font-family: 'Open Sans';
     font-style: normal;
     font-weight: bold;
-    font-size: 18px;
-    line-height: 25px;
+    font-size: 2.3vw;
+    line-height: 2.5vw;
     color: #FFFFFF;
-    padding: 5px
+    padding: 1vw;
 }
 
 .link_rodape {
-    width: 52px;
-    height: 52px;
-    margin-right: 5px;
-    margin-left: 5px;
+    width: 4.3vw;
+    height: 4.3vw;
+    margin-right: 0.3vw;
+    margin-left: 0.3vw;
     transition: 0.025s;
-    border-radius: 26px
+    border-radius: 3vw;
 }
 .link_rodape:hover{
     transform: scale(1.2);
@@ -181,14 +187,62 @@ a:visited {
     font-family: 'Open Sans';
     font-weight: bold;
     font-style: normal;
-    font-size: 18px;
-    line-height: 25px;
+    font-size: 2.8vw;
+    line-height: 3vw;
     color: #FFFFFF
 }
 .location_text {
     font-style: normal;
     font-weight: bold;
-    font-size: 14px;
-    line-height: 16px;
+    font-size: 1.8vw;
+    line-height: 1.8vw;
     color: #FFFFFF
+}
+@media (max-width: 800px){
+    .rodape {
+        background: #041846;
+        display: flex;
+        flex-direction: column;
+        margin-top: 10vw;
+    }
+    .rodape_logo2{
+        padding: 3vw;
+        width: 34vw;
+        height: auto;
+    }
+    .rodape_social_box{
+        width: 100%;
+        background: #F5761D;
+        border-radius: 5vw;
+        text-align: center;
+        font-family: 'Open Sans';
+        font-style: normal;
+        font-weight: bold;
+        font-size: 5.5vw;
+        line-height: 2.5vw;
+        color: #FFFFFF;
+        padding: 3vw;
+        margin-left: auto;
+        margin-left: auto;
+    }
+
+    .link_rodape {
+        width: 10vw;
+        height: auto;
+        margin-right: 1vw;
+        margin-left: 1vw;
+        transition: 0.025s;
+        border-radius: 3vw;
+    }
+
+    .location {
+        padding: 1vw;
+        text-align: left;
+        font-family: 'Open Sans';
+        font-weight: bold;
+        font-style: normal;
+        font-size: 2.8vw;
+        color: #FFFFFF
+    }
+   
 }
