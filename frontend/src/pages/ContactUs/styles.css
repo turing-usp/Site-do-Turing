@@ -194,7 +194,7 @@
 
 .question_and_btn {
   display: flex;
-  align-items: flex-end;
+  align-items: baseline;
   justify-content: space-between;
 }
 
@@ -220,6 +220,7 @@
   opacity: 0.8;
   margin-top: 0px;
   margin-bottom: 50px;
+  text-align: left;
 }
 
 .answer_hidden {
