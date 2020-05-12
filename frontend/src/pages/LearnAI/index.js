@@ -45,11 +45,11 @@ export default function LearnAI () {
             
             <div class='areas_de_foco'>
                 {showDesc && <span class="titulo_areas">Áreas de Foco</span>}
-                {showCV && <span class="titulo_areas">Computer Vision</span>}
-                {showNLP && <span class="titulo_areas">Natural Language Processing</span>}
-                {showDS && <span class="titulo_areas">Datascience</span>}
-                {showQT && <span class="titulo_areas">Quantitative Finance</span>}
-                {showRL  && <span class="titulo_areas">Reinforcement Learning</span>}
+                {showCV && <span class="titulo_areas">Computação Visual</span>}
+                {showNLP && <span class="titulo_areas">Processamento de Linguagem Natural</span>}
+                {showDS && <span class="titulo_areas">Ciência de Dados</span>}
+                {showQT && <span class="titulo_areas">Finanças Quantitativas</span>}
+                {showRL  && <span class="titulo_areas">Aprendizado por Reforço</span>}
                 {showDesc && <div class='caixa_area'>
                     <div class='texto_area'>
                         O Naruto pode ser um pouco duro às vezes, talvez você não saiba disso, mas o Naruto também cresceu 

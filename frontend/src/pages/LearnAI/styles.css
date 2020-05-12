@@ -132,7 +132,7 @@ Delimita o lado superior esquerdo e o inferior direito
 .img_area_overlay {
     position: relative;
     filter: opacity(0);
-    transition: 0.5s;
+    transition: 0.2s;
 }
 
 .img_area_overlay:hover {
