@@ -259,7 +259,7 @@ export default function ContactUs () {
                     <div class='question_and_btn'>
                         <p class='question' onClick={() => showAnswer(index)}>{question}</p>
                         <button class="btnAnswer" onClick={() => showAnswer(index)}>
-                            <FiPlus size={30} color="#F2994A"/>
+                            <FiPlus size='2.5vw' color="#F2994A"/>
                         </button>
                     </div>
                     <p class={`answer${questionNumber === index ? '_show' : '_hidden'}`}>{answer}</p>
