@@ -194,7 +194,7 @@ export default function ContactUs () {
             <span class="title_form">Contato</span>
             <form class='formulario'>
                 <div class='container_entrada'>
-                    <BsFillPersonFill color='rgb(100, 100, 100)' size='1.3em'/>
+                    <BsFillPersonFill color='rgb(100, 100, 100)' size='1.3em' class='icon'/>
                     <input
                         class={errorNome ? 'entrada_error':'entrada'}
                         value={nome}
@@ -204,7 +204,7 @@ export default function ContactUs () {
                     {errorNome && <p class='text_error_entrada'>{errorNome}</p>}
                 </div>
                 <div class='container_entrada'>
-                    <MdEmail color='rgb(100, 100, 100)' size='1.3em'/>
+                    <MdEmail color='rgb(100, 100, 100)' size='1.3em' class='icon'/>
                     <input
                         class={errorEmail ? 'entrada_error':'entrada'}
                         value={email}
@@ -214,7 +214,7 @@ export default function ContactUs () {
                     {errorEmail && <p class='text_error_entrada'>{errorEmail}</p>}
                 </div>
                 <div class='container_entrada'>
-                    <FaSuitcase color='rgb(100, 100, 100)' size='1.3em'/>
+                    <FaSuitcase color='rgb(100, 100, 100)' size='1.3em' class='icon'/>
                     <input
                         class='entrada'
                         value={grupo}
@@ -223,7 +223,7 @@ export default function ContactUs () {
                     />
                 </div>
                 <div class='container_entrada'>
-                    <BsChatQuoteFill color='rgb(100, 100, 100)' size='1.3em'/>
+                    <BsChatQuoteFill color='rgb(100, 100, 100)' size='1.3em' class='icon'/>
                     <input
                         class={errorAssunto ? 'entrada_error':'entrada'}
                         value={assunto}
@@ -233,18 +233,16 @@ export default function ContactUs () {
                     {errorAssunto && <p class='text_error_entrada'>{errorAssunto}</p>}
                 </div>
                 <div class='container_mensagem'>
-                    <AiFillFileText color='rgb(100, 100, 100)' size='1.3em'/>
+                    <AiFillFileText color='rgb(100, 100, 100)' size='1.3em' class='icon'/>
                     <textarea
                         class={errorMensagem ? 'mensagem_error':'mensagem'}
                         value={mensagem}
                         onChange={e => setMensagem(e.target.value)}
                         placeholder='Escreva sua mensagem'
                     />                                   
-                    {!validated && <button class='enviar' onClick={handleSubmit}><span>Enviar</span></button>}
+                    {!validated && <button class='btn_enviar' onClick={handleSubmit}><span class="span_enviar">Enviar</span></button>}
                     {validated && <img class='check' src={check} />}
-                    <div class='container_text_error_mensagem'>
-                        {errorMensagem && <p class='text_error_mensagem'>{errorMensagem}</p>}
-                    </div>
+                    {errorMensagem && <p class='text_error_mensagem'>{errorMensagem}</p>}
                 </div>
             </form>
 
