@@ -17,7 +17,8 @@ module.exports = {
         });
     },
     async index(request, response){
-        const members = await connection('members').select('*');
+        const {role = ''} = request.query;
+        const members = await connection('members').where('role','like', `%${role}%`).select('*');
         return response.json(members)
     },
 
