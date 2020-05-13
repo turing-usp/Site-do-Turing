@@ -1,6 +1,5 @@
 // Update with your config settings.
 module.exports = {
-
   development: {
     client: 'sqlite3',
     connection: {
@@ -13,7 +12,7 @@ module.exports = {
   },
 
   staging: {
-    client: 'postgresql',
+    client: 'pg',
     connection: {
       database: process.env.DATABASE_URL,
       user:     process.env.DATABASE_USER,
@@ -24,12 +23,12 @@ module.exports = {
       max: 10
     },
     migrations: {
-      tableName: 'knex_migrations'
+      directory: './src/database/migrations'
     }
   },
 
   production: {
-    client: 'postgresql',
+    client: 'pg',
     connection: {
       database: process.env.DATABASE_URL,
       user:     process.env.DATABASE_USER,
@@ -40,7 +39,7 @@ module.exports = {
       max: 10
     },
     migrations: {
-      tableName: 'knex_migrations'
+      directory: './src/database/migrations'
     }
   }
 
