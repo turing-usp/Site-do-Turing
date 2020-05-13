@@ -15,7 +15,7 @@
     text-align: center;
 }
 .container{
-    text-align: Center
+    text-align: center;
 }
 .description {
     margin-top: 1em;
@@ -37,16 +37,11 @@
     margin-top: 3em;
     color: #ffffff;
     padding: 5px;
-}
-.wrapper{
-    text-align: Center
-}
-    
+}    
 
 .more_events_box button ::-moz-focus-inner {
     border: 0;
-  }
-  
+  }  
   
 .more_events_box button:active{
     outline: 0;
@@ -54,36 +49,37 @@
 
 .ul_events {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
-    grid-auto-rows: 1fr;
-    align-self: stretch;
-    gap: 2em;
-    list-style: none;
-    justify-content:center;
-    margin-right:3em;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    row-gap: 1.5em;
+    justify-items: center;
+    justify-content: center;
 }
 
 .li_events{
-    padding: 1.2em;
-    border-radius: 30px;
-    position: relative;
-    justify-content: space-between;
     display:flex;
-    align-content: center;
-    flex-direction: column;
-    color: #F5761D;
-
+    align-items: center;
+    justify-items: center;
+    padding: 1.2em;
 }
 
 .event-img{
-    height: 15;
     width: 100%;
-    height: 200px;
+    max-width: 40vw;
     border-radius: 30px;
     transition: 0.2s;
 }
 
+@media (max-width: 900px) {
+    .event-img{
+        max-width: 60vw;
+    }
+  }
+
 .event-img:hover{
     transform: scale(1.1);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.wrapper{
+    text-align: center;
 }
