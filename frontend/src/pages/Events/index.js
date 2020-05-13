@@ -51,26 +51,26 @@ export default function Events () {
                 Veja alguns de nossos próximos eventos e eventos que já realizamos.<br />
             </p>
             <div class='subtitulos'>Próximos Eventos</div>
-            <ul class='ul_events'>
+            <div class='ul_events'>
                 {eventosNaoRealizados.map(event => (
-                    <li class='li_events' key={ event.eventId }>
+                    <div class='li_events' key={ event.eventId }>
                         <a target='_blank' href={event.link}>
                             <img class='event-img' src={event.img}></img>
                         </a>
-                    </li>
+                    </div>
                 ))}
-            </ul>
+            </div>
             { (eventosNaoRealizados[0] == null) && <p class='description'>Não há eventos sendo preparados no momento.</p>}
             <div class='subtitulos'>Eventos Realizados</div>
-            <ul class='ul_events'>
+            <div class='ul_events'>
                 {eventosRealizados.map(event => (
-                    <li class='li_events' key={ event.eventId }>
+                    <div class='li_events' key={ event.eventId }>
                         <a target='_blank' href={event.link}>
                             <img class='event-img' src={event.img}></img>
                         </a>
-                    </li>
+                    </div>
                 ))}
-            </ul>
+            </div>
             <div class="wrapper">
                 {showButton && <button class='more_events_box' onClick={handleMoreEvents}>
                     Mais Eventos
