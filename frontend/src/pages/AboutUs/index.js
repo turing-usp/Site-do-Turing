@@ -9,6 +9,8 @@ import {FiPlus} from 'react-icons/fi'
 import Cabecalho from '../../Tags/Cabecalho.js'
 import Rodape from '../../Tags/Rodape.js'
 
+import api from '../../services/api.js'
+
 export default function AboutUs () {
     return (
         <div class='container'>
