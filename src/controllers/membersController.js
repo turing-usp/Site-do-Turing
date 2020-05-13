@@ -2,11 +2,11 @@ const connection = require('../database/connection');
 
 module.exports = {
     async create(request, response){
-        const { name, role, linkedIn, github, email, photoLink } = request.body;
+        const { name, role, linkedin, github, email, photoLink } = request.body;
         await connection('members').insert({
             name,
             role,
-            linkedIn,
+            linkedin,
             github,
             email,
             photoLink
