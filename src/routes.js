@@ -8,8 +8,9 @@ const faqController = require('./controllers/faqController');
 const eventsController = require('./controllers/eventsController');
 const projectsController = require('./controllers/projectsController');
 const formsController = require('./controllers/formsController.js')
-
+const rootController = require('./controllers/rootController.js')
 // GET methods
+routes.get('/', rootController.index)
 routes.get('/members', membersController.index);
 routes.get('/sendContact', formsController.index);
 routes.get('/listMediumPosts', mediumController.index);
