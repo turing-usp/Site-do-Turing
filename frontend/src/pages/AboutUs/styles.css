@@ -99,19 +99,33 @@ h2.tipos_de_membros:after {
     white-space: nowrap;
     color: #041846;
     font-family: Open Sans;;
-    font-size: 3vw;
+    font-size: 2vw;
 }
 
 
 .contato_membro {
     width: 100%;
     display: flex;
+    flex-direction: column;
     justify-content: center;
 }
 
-.github_membro img{
-    width: 50%;
-    height: auto;
+.linkedin_membro img, .github_membro img{
+    width: auto;
+    height: 3vw;
     margin-left: 0.5vw;
 }
 
+.rede_membro{
+    display: flex;
+    flex-direction: row;
+    margin: 0 auto;
+    
+}
+
+.email_membro{
+    color: #929292;
+    font-family: Open Sans;
+    font-size: 1.5vw;
+    margin-bottom: 0.5vw;
+}
