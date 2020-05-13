@@ -12,15 +12,17 @@
 }
 
 .container_entrada {
-  width: 70%;
-  align-self: center;
+  display: flex;
   flex-direction: row;
+  justify-content: center;
   align-items: center;
+  align-self: center;
+  width: 70%;
   margin: 15px;
 }
 
 .entrada, .entrada_error {
-  width: 80%;
+  width: 100%;
   padding: 20px;
   font-size: 15px;
   margin-left: 10px;
@@ -32,7 +34,8 @@
 }
 
 .entrada_error {
-  border: 2px solid #FF0000
+  align-self: flex-end;
+  border: 2px solid #FF0000;
 }
 
 .entrada:focus {
@@ -45,28 +48,24 @@
   justify-content: center;
   align-items: center;
   align-self: center;
-  width: 70%;
+  width:70%;
   margin: 15px;
 }
 
 .mensagem, .mensagem_error {
-  height: 130px;
-  margin-left: 10px;
-  width:62%;
+  flex-grow: 1;
   padding: 20px;
-  margin-top: 15px;
+  height: 160px;
+  margin-left: 10px;
   box-sizing: border-box;
   border-radius: 30px;
   border: 2px solid rgb(255, 255, 255);
-  background-color: rgb(255, 255, 255);
   color: rgb(0, 0, 0);
   resize: vertical;
   transition: 0.5s;
   font-size: 15px;
-  font-family: Arial, Helvetica, sans-serif;
-
+  font-family: Arial, sans-serif;
   scrollbar-width: none;
-  -ms-overflow-style: none;
 }
 
 .mensagem_error {
@@ -78,22 +77,20 @@
   border: 2px solid #3b61b6
 }
 
-/* Scrollbar da caixa de mensagem */  
 .mensagem::-webkit-scrollbar {
   display: none;
   width: 0px;
   background: transparent;
 }
 
-.text_error_entrada, .text_error_mensagem {
-  position: absolute;
-  left: 26%;
-  font-size: 12px;
-  font-family: Arial, Helvetica, sans-serif;
-  color: #FF0000;
-  margin-top: 5px;
-  margin-left: -2.5%;
+.icon {
   animation: fadein 1s;
+}
+
+@media (max-width: 800px) {
+  .icon{
+    display: none;
+  }
 }
 
 @keyframes fadein {
@@ -101,64 +98,75 @@
   to {opacity: 1}
 }
 
+.text_error_entrada, .text_error_mensagem {
+  position: absolute;
+  left: min(18%, 20vw);
+  font-size: 12px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #FF0000;
+  animation: fadein 1s;
+  margin-top: 95px;
+}
+
 .text_error_mensagem {
-  margin-left: -2.5%;
+  margin-top: 195px;
 }
 
-.container_text_error_mensagem {
-  align-self: flex-end;
+.span_enviar {
+  align-self: center;
 }
 
-.enviar {
-  background-color: #F2994A;
-  width: 13.5vw;
-  border-radius: 30px;
+.btn_enviar {
+  display: flex;
+  align-self: center;
+  justify-content: center;
+  max-width: 20vw;
+  max-height: 2vw;
+  font-size: min(4vw, 25px);
   border: none;
+  border-radius: 30px;
+  padding: min(6vw, 40px);
+  margin-left: min(1%, 15px);
   color: white;
-  font-size: 1.9vw;
-  padding: 1.8vw;
+  background-color: #F2994A;
   cursor: pointer;
-  margin-left: 15px;
   animation: fadein 2s;
   transition: all 0.5s;
 }
 
-.enviar:hover{
+.btn_enviar:hover{
   background-color: rgb(255, 119, 0);
 }
 
-.enviar span {
+.btn_enviar span {
   cursor: pointer;
   position: relative;
   transition: 1s;
 }
 
-.enviar span:after {
+.btn_enviar span:after {
   content: '\00bb';
   position: absolute;
   opacity: 0;
-  top: 0;
-  right: 30px;
+  right: 40px;
   transition: 0.5s;
 }
 
-.enviar:hover span {
-  padding-right: 20px;
+.btn_enviar:hover span {
+  padding-right: min(50px, 40%);
 }
 
-.enviar:hover span:after {
+.btn_enviar:hover span:after {
   opacity: 1;
   right: 0;
 }
-
 
 .check {
   width: 110px;
   animation: fadein 3s;
   transition: 1s;
-  margin-top: 15px;
-  margin-left: 11.8%;
-}
+  margin-left: 10%;
+}  
 
 
 .faq_and_answer {
@@ -186,7 +194,7 @@
 
 .question_and_btn {
   display: flex;
-  align-items: flex-end;
+  align-items: baseline;
   justify-content: space-between;
 }
 
@@ -212,6 +220,7 @@
   opacity: 0.8;
   margin-top: 0px;
   margin-bottom: 50px;
+  text-align: left;
 }
 
 .answer_hidden {

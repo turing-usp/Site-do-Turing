@@ -47,7 +47,6 @@ export default function AboutUs () {
                 mas mantendo-se aberto a sugestões.
             </p>
             <br/>
-
             <h1 class='titulo_aboutus'>Nossos Membros</h1>
             <h2 class="tipos_de_membros">Diretores</h2>
 
