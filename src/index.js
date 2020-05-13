@@ -7,5 +7,8 @@ app.use(express.json());
 app.use(cors());
 app.use(routes);
 
-app.listen(3333); //utilize route 3333 for backend on development
+PORT_TO_LISTEN = process.env.PORT || 3333;
+app.listen(PORT_TO_LISTEN, () => {
+    console.log('Server listening on port', PORT_TO_LISTEN)
+});
 
