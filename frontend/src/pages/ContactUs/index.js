@@ -24,8 +24,6 @@ export default function ContactUs () {
 
 
     /* Estados Forms */
-
-
     const [nome, setNome] = useState('')
     const [email, setEmail] = useState('')
     const [grupo, setGrupo] = useState('')
@@ -68,15 +66,17 @@ export default function ContactUs () {
             !errorMensagem) {
 
             setValidated(true)
-
+            
             const data = {
-                nome,
-                email,
-                grupo,
-                assunto,
-                mensagem
+                "contactName": nome,
+                "email":email,
+                "entity":grupo,
+                "message" :mensagem,
+                "motivation" : assunto
             };
-
+    
+            api.post('/sendContact', data);
+    
             setNome('')
             setEmail('')
             setGrupo('')
@@ -93,7 +93,6 @@ export default function ContactUs () {
 
 
         /** Integração Faqs **/
-
 
 
         api.get('/faq').then(response => {
@@ -195,6 +194,7 @@ export default function ContactUs () {
             <form class='formulario'>
                 <div class='container_entrada'>
                     <BsFillPersonFill color='rgb(100, 100, 100)' size='1.3em' class='icon'/>
+                    
                     <input
                         class={errorNome ? 'entrada_error':'entrada'}
                         value={nome}
