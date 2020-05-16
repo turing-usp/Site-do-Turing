@@ -13,3 +13,8 @@
 - [André Barbieri](https://github.com/andrebarbs13)
 - [Paulo Sestini](https://github.com/paulosestini)
 - [Leonardo Murakami](https://github.com/leonardomurakami)
+---
+### Status
+[![Netlify Status](https://api.netlify.com/api/v1/badges/2074abe7-6d76-408d-a8c6-a0f7241f5e10/deploy-status)](https://app.netlify.com/sites/sitegrupoturing/deploys)
+![Heroku](https://pyheroku-badge.herokuapp.com/?app=sitegrupoturing&style=plastic)
+

@@ -12,6 +12,7 @@ import Rodape from '../../Tags/Rodape.js'
 
 import api from '../../services/api.js'
 
+<<<<<<< HEAD
 export default function AboutUs () { 
     
     const [diretores, setDiretores] = useState([]);
@@ -32,6 +33,9 @@ export default function AboutUs () {
         });
         }, []);
 
+=======
+export default function AboutUs () {
+>>>>>>> master
     return (
         <div class='container'>
             <Cabecalho />
