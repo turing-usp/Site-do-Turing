@@ -44,14 +44,14 @@ export default function LearnAI () {
             <Cabecalho />
             
             <div class='areas_de_foco'>
-                {showDesc && <span class="titulo_areas">Áreas de Foco</span>}
-                {showCV && <span class="titulo_areas">Computação Visual</span>}
-                {showNLP && <span class="titulo_areas">Processamento de Linguagem Natural</span>}
-                {showDS && <span class="titulo_areas">Ciência de Dados</span>}
-                {showQT && <span class="titulo_areas">Finanças Quantitativas</span>}
-                {showRL  && <span class="titulo_areas">Aprendizado por Reforço</span>}
+                {showDesc && <span class="titulos">Áreas de Foco</span>}
+                {showCV && <span class="titulos">Computação Visual</span>}
+                {showNLP && <span class="titulos">Processamento de Linguagem Natural</span>}
+                {showDS && <span class="titulos">Ciência de Dados</span>}
+                {showQT && <span class="titulos">Finanças Quantitativas</span>}
+                {showRL  && <span class="titulos">Aprendizado por Reforço</span>}
                 {showDesc && <div class='caixa_area'>
-                    <div class='texto_area'>
+                    <div class='texto'>
                         O Naruto pode ser um pouco duro às vezes, talvez você não saiba disso, mas o Naruto também cresceu 
                         sem pai. Na verdade ele nunca conheceu nenhum de seus pais, e nunca teve nenhum amigo em nossa aldeia.
                         Mesmo assim eu nunca vi ele chorar, ficar zangado ou se dar por vencido, ele está sempre disposto a 
@@ -59,7 +59,7 @@ export default function LearnAI () {
                     </div>
                 </div>}
                 {showCV && <div class='caixa_area'>
-                    <div class='texto_area'>
+                    <div class='texto'>
                         Sasuke Uchiha (うちはサスケ, Uchiha Sasuke) é um dos últimos membros sobreviventes do clã Uchiha 
                         de Konohagakure, além de ser a reencarnação atual de Indra. Ele se tornou um shinobi para que 
                         pudesse algum dia ficar forte o suficiente para se vingar contra o seu irmão mais velho, Itachi.
@@ -70,7 +70,7 @@ export default function LearnAI () {
                     </a>
                 </div>}
                 {showNLP && <div class='caixa_area'>
-                    <div class='texto_area'>
+                    <div class='texto'>
                         Hinata Uzumaki (うずまきヒナタ, Uzumaki Hinata, batizada Hyūga (日向)) é a maior personagem de assistência 
                         da série. Ela é um membro dos clãs Hyūga e Uzumaki de Konohagakure. Tendo um temperamento humilde, a falta 
                         de auto-confiança de Hinata era refletida em suas habilidades.
@@ -80,7 +80,7 @@ export default function LearnAI () {
                     </a>
                 </div>}
                 {showDS && <div class='caixa_area'>
-                    <div class='texto_area'>
+                    <div class='texto'>
                         Sakura Uchiha (うちはサクラ, Uchiha Sakura; batizada Haruno (春野) inicialmente) é uma kunoichi 
                         de nível jōnin do clã Uchiha, após se casar, de Konohagakure. Ela é designada como um membro 
                         do Time Kakashi, mas rapidamente encontra-se mal preparada para os deveres de um ninja. 
@@ -90,7 +90,7 @@ export default function LearnAI () {
                     </a>
                 </div>}
                 {showQT && <div class='caixa_area'>
-                    <div class='texto_area'>
+                    <div class='texto'>
                         Orochimaru (大蛇丸, Orochimaru) é um dos Lendários Sannin, junto com Tsunade e Jiraiya, de Konohagakure. 
                         Com sua ambição de vida sendo aprender todos os segredos do mundo, Orochimaru buscou a imortalidade para 
                         que ele pudesse viver todas as vidas necessárias para realizar sua tarefa.
@@ -100,7 +100,7 @@ export default function LearnAI () {
                     </a>
                 </div>}
                 {showRL && <div class='caixa_area'>
-                    <div class='texto_area'>
+                    <div class='texto'>
                         Tsunade (綱手, Tsunade) é uma dos Sannin Lendários de Konohagakure. Embora seja considerada a kunoichi mais 
                         poderosa do mundo e a maior ninja médica, Tsunade abandonou a vida de shinobi por muitos anos em busca 
                         de outros objetivos.
@@ -209,30 +209,35 @@ export default function LearnAI () {
             </div>
 
             <div class="arvore_de_habilidades">
-                <span class="titulo_arvore">Árvore de Habilidades</span>
-                <div class="arvhab">
-                    <img class="arvhab-image" src={arvhab} alt="arvhab"></img>
+                <span class="titulos">Árvore de Habilidades</span>
+                <div>
+                    <img class="imagem_arvore" src={arvhab} alt="arvhab" />
                 </div>
-                    <div class="descricao_da_arvore">Quer aprender Data Science/IA e não sabe por onde começar?
-                                    <br/> Dê uma olhada na Árvore de Habilidades do grupo Turing!
-                                    <br/> Os itens clicáveis te levam a uma página no github onde você pode
-                                    <br/> conferir um exemplo daquele conceito          
-                    </div>
-                <div class="coggle">
-                    <iframe class="arvore_coggle" src="https://embed.coggle.it/diagram/XO2xElTTBjb9Mduz/709359e9f455d0aa8e1f1539d84693b3289686cd3efad7ecd94a441aa6bb488e" allowfullscreen></iframe>
+                <div class="texto arvore">
+                    Quer aprender Data Science/IA e não sabe por onde começar? <br/>
+                    Dê uma olhada na Árvore de Habilidades do grupo Turing! <br/>
+                    Os itens clicáveis te levam a uma página no github onde você pode <br/>
+                    conferir um exemplo daquele conceito          
+                </div>
+                <div>
+                    <iframe class="coggle_arvore" src="https://embed.coggle.it/diagram/XO2xElTTBjb9Mduz/709359e9f455d0aa8e1f1539d84693b3289686cd3efad7ecd94a441aa6bb488e" allowfullscreen />
                 </div>
             </div>
 
             <div class="medium">
-                    <span class="titulo_arvore">Artigos do Medium</span>
-                    <ul class='medium_posts'>
+                <span class="titulos">Artigos do Medium</span>
+                <div class='medium_posts'>
                     {posts.map(post => (
                         <a target='_blank' class='post' href={post.guid} key={post.guid}>
-                            <img class ='medium_pic' src={post.thumbnail} />
-                            <div class='medium_title'>{post.title}</div>
+                            <div class='cont'>
+                                <img class ='medium_pic' src={post.thumbnail} />
+                            </div>
+                            <div class='cont2'>
+                                <div class='medium_title'>{post.title}</div>
+                            </div>
                         </a>
                     ))}
-                    </ul>
+                </div>
             </div>
             <Rodape />
         </div>
