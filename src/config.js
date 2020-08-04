@@ -3,4 +3,11 @@ let secrets = {
     MAILJET_SECRET_API_KEY: process.env.MAILJET_SECRET_API_KEY || "secret"
 };
 
-module.exports = { secrets }
+module.exports = { 
+    devServer: {
+        historyApiFallback: true
+    },
+    output: {
+        publicPath: '/'
+    },
+    secrets}

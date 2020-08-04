@@ -21,7 +21,7 @@
     margin-top: 1em;
     color: #929292;
     text-align: center;
-    font-family: Open Sans;
+    font-family: 'Open Sans';
 }
 .more_events_box{
     width: 206px;
@@ -45,6 +45,9 @@
   
 .more_events_box button:active{
     outline: 0;
+}
+.more_events_box:hover{
+    cursor: pointer;
 }
 
 .ul_events {

@@ -6,8 +6,18 @@
     display: flex;
     flex-direction: column;
 }
+.primeiro_titulo_aboutus{
+    margin-top: 4em;
+    font-family: 'Oswald';
+    font-size: 3em;
+    font-weight: 500;
+    color: #F2994A;
+    text-shadow: 0.03em 0.03em 0.03em gray;
+    text-align: center;
+}
 .titulo_aboutus{
     margin-top: 2em;
+    font-family: 'Oswald';
     font-size: 3em;
     font-weight: 500;
     color: #F2994A;
@@ -20,7 +30,7 @@
     margin-top: 1em;
     color: #929292;
     text-align:justify;
-    font-family: Open Sans;;
+    font-family: 'Open Sans';
     font-size: 3vw
 }
 
@@ -98,7 +108,7 @@ h2.tipos_de_membros:after {
 .nome_membro{
     white-space: nowrap;
     color: #041846;
-    font-family: Open Sans;;
+    font-family: 'Open Sans';
     font-size: 2vw;
 }
 
@@ -125,7 +135,7 @@ h2.tipos_de_membros:after {
 
 .email_membro{
     color: #929292;
-    font-family: Open Sans;
+    font-family: 'Open Sans';
     font-size: 1.5vw;
     margin-bottom: 0.5vw;
 }

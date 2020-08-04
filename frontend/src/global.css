@@ -39,6 +39,7 @@ html, body {
 
 .rect_cabecalho {
     font-size: 15.9px;
+    font-family: 'Open Sans';
     width: 100%;
     top: 0;
     z-index:300;

@@ -190,7 +190,7 @@ export default function ContactUs () {
             {/* Forms */}
 
 
-            <span class="title_form">Contato</span>
+            <div class="title_form">Contato</div>
             <form class='formulario'>
                 <div class='container_entrada'>
                     <BsFillPersonFill color='rgb(100, 100, 100)' size='1.3em' class='icon'/>

@@ -19,5 +19,7 @@
     "sqlite3": "^4.1.1",
     "xmlhttprequest": "^1.8.0"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "react-snapshot": "^1.3.0"
+  }
 }
