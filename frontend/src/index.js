@@ -1,10 +1,10 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { render } from 'react-snapshot';
 
 import App from './App';
 
 
-ReactDOM.render(
+render(
   <React.StrictMode>
     <App />
   </React.StrictMode>,
