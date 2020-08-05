@@ -1,13 +1,13 @@
 .titulo_eventos{
     margin-top:4em;
-    font-size: 3em;
+    font-size: 3.6vw;
     font-weight: 500;
     color: #F2994A;
     text-shadow: 0.03em 0.03em 0.03em gray;
     text-align: center;
 }
 .subtitulos{
-    font-size: 2.5em;
+    font-size: 3vw;
     margin-top: 1.5em;
     font-weight: 500;
     color: #F2994A;
@@ -19,6 +19,7 @@
 }
 .description {
     margin-top: 1em;
+    font-size: 1.3vw;
     color: #929292;
     text-align: center;
     font-family: 'Open Sans';

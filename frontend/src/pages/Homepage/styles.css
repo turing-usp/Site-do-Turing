@@ -13,7 +13,7 @@
     width: 75%;
     padding: 1.5vw;
     text-align: center;
-    margin-top: 12vw;
+    margin-top: 20vh;
     display: inline-block;
     background: rgba(0, 0, 0, 0.7);
 }
@@ -84,7 +84,8 @@
 .img{
     width: 20em;
     height: 15em;
-
+    width: em;
+    height: auto;
     border-radius: 30px;
 }
 
