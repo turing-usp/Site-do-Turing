@@ -3,9 +3,10 @@
     flex-direction: column;
 }
 
-.titulo_areas {
-    margin-top:4em;
-    font-size: 3em;
+.titulos {
+    margin-top: 9vw; /* Reajustar após corrigir o cabeçalho */
+    margin-bottom: 0.5vw;
+    font-size: 3vw;
     font-weight: 500;
     color: #F2994A;
     text-shadow: 0.03em 0.03em 0.03em gray;
@@ -20,60 +21,62 @@
 .caixa_area {
     display: flex;
     flex-direction: row;
-    border-radius: 3em;
-    color: rgb(68, 68, 68);
-    margin: 1em auto;
-    width: 60%;
+    align-items: center;
+    width: 80%;
+    margin: 1vw auto;
+    border-radius: 3vw;
     background-color: #d9f0fc;
     animation: fadein 1s;
 }
 
-.texto_area {
-    padding-top: 30px;
-    padding-bottom: 30px;
-    padding-left: 30px;
-    padding-right: 30px;
+.texto {
+    font-size: 1vw;
+    color: rgb(90, 90, 90);
+    margin-top: 2vw;
+    margin-bottom: 2vw;
+    margin-left: 2vw;
+    margin-right: 2vw;
 }
 
 .github_icon, .link {
-    flex: 0 0 auto;
-    align-self: center;
-    padding-right: 30px;
-    width: 64px;
+    flex: auto;
+    margin-right: 1.6vw;
+    margin-top: 0.2vw;
+    width: 4vw;
 }
 
 .hexagonos_area {
-    margin: 3em auto auto auto;
+    margin: 2vw auto;
 }
 
 .hexagonos_linha1 {
     display: grid;
-    grid-template-columns: repeat(3, 140px);
-    grid-template-rows: 115px;
+    grid-template-columns: repeat(3, 26.5%);
+    grid-template-rows: 12vw;
     justify-content: center;
     place-items: center;
 }
 
 .hexagonos_linha2 {
     display: grid;
-    grid-template-columns: repeat(2, 140px);
+    grid-template-columns: repeat(2, 26.5%);
     justify-content: center;
     place-items: center;
 }
 
 /* 
-Hexágono: sobreposição de três retângulos.
+Hexágono: intersecção de três retângulos "sobrepostos".
 
 Retângulo principal (.hexagon)
 Controla a rotação do hexágono como um todo
 Delimita a largura do hexágono (os dois lados verticais)
  */
  .hexagon {
+    width: 18vw;
+    height: 13vw; /* height(vw) = width(vw) - 5vw */
     overflow: hidden;
-    visibility: hidden;
-    width: 260px;
-    height: 130px;
-    margin-left: -20;
+    visibility: hidden; /* para debugar -> visibility: visible; */
+    background-color: lawngreen; /* debug */
 
     -webkit-transform: rotate(90deg);
        -moz-transform: rotate(90deg);
@@ -90,7 +93,8 @@ Delimita o lado superior direito e o inferior esquerdo
     width: 100%;
     height: 100%;
     overflow: hidden;
-    visibility: hidden;
+    visibility: hidden; /* para debugar -> visibility: visible; */
+    background-color: rgb(4, 0, 252); /* debug */
 
     -webkit-transform: rotate(120deg);
        -moz-transform: rotate(120deg);
@@ -107,7 +111,8 @@ Delimita o lado superior esquerdo e o inferior direito
     width: 100%;
     height: 100%;
     overflow: hidden;
-    visibility: hidden;
+    visibility: hidden; /* para debugar -> visibility: visible; */
+    background-color: rgb(252, 0, 189); /* debug */
 
     -webkit-transform: rotate(120deg);
        -moz-transform: rotate(120deg);
@@ -119,8 +124,8 @@ Delimita o lado superior esquerdo e o inferior direito
 .img_area, .img_area_overlay {
     visibility: visible;
     position: absolute;
-    width: 130px;
-    top: -10px;    
+    width: 73%;
+    top: -8%;    
     cursor: pointer;
     
     -webkit-transform: rotate(30deg);
@@ -133,7 +138,7 @@ Delimita o lado superior esquerdo e o inferior direito
 .img_area_overlay {
     position: relative;
     filter: opacity(0);
-    transition: 0.2s;
+    transition: 0.1s;
 }
 
 .img_area_overlay:hover {
@@ -141,83 +146,263 @@ Delimita o lado superior esquerdo e o inferior direito
 }
 
 
-.arvore_de_habilidades{
+.arvore_de_habilidades {
     display: flex;
     flex-direction: column;
 }
 
-.arvhab-image{
-    text-align: center;
-    width: 15em;
-    height: auto;
-    box-sizing: border-box;
-}
-.descricao_da_arvore{
-    margin-top: 1em;
-    color: #929292;
-    text-align: center;
-    font-family: Open Sans;
-}
-.coggle{
-    margin-left: auto;
-    margin-right: auto;
-    width: 80vw;
-    height: 34vw;
+.imagem_arvore {
+    margin-top: 1vw;
+    width: 15vw;
 }
 
-.arvore_coggle{
-    margin-top: 2em;
-    width: 100%;
-    height: 100%;
+/* Altera a margem a descrição da árvore */
+.arvore {
+    margin: 1vw auto auto;
 }
 
-.titulo_arvore{
-    margin-top: 2em;
-    font-size: 3em;
-    font-weight: 500;
-    color: #F2994A;
-    text-shadow: 0.03em 0.03em 0.03em gray;
-    text-align: center;
+.coggle_arvore {
+    margin-top: 3vw;
+    width: 85%;
+    height: 40vw;
 }
 
-.medium{
-    margin-top: 4em;
+
+.medium {
     display: flex;
-    width: 100%;
     flex-direction: column;
+    width: 90%;
+    margin-left: 50%;
+    transform: translateX(-50%);
 }
 
-.medium_posts{
+.medium_posts {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
-    grid-auto-rows: 1fr;
-    align-self: stretch;
-    gap: 2em;
-    list-style: none;
-    justify-content:center;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    row-gap: 1vw;
+    column-gap: 1vw;
+    margin: 1vw;
 }
 
-.post{
-    padding: 1.2em;
-    border-radius: 30px;
-    position: relative;
-    justify-content: space-between;
+.post {
     display:flex;
-    flex-direction: column
+    flex-direction: column;
+    height: 20vw;
+    padding: 1.5vw;    
+    border-radius: 2vw;
+    background-color: #d9f0fc;
 }
 
-.medium_pic{
-    border-radius: 30px;
-    width: 100%;
-    height: 200px;
-    align-self: center;
+.post:hover .medium_pic {
+    transform: scale(105%);
 }
 
-.medium_title{
+.post:hover .medium_title {
+    text-decoration: underline;
+}
+
+.cont, .cont2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 65%;  
+}
+
+.cont2 {
+    height: 35%; 
+}
+
+.medium_pic {
+    height: 100%;
+    border-radius: 2vw;
+    object-fit: cover;
+    transition: 0.1s;
+}
+
+.medium_title {
     text-transform: uppercase;
-    text-align: center;
     color: #F2994A;
     text-shadow: 0.01em 0.01em 0.01em gray;
-    font-size: 1em;
+    font-size: 1.2vw;
     font-family: Open Sans;
+    margin-top: 1vw;
+
+    /* Adiciona reticências para títulos com mais de 3 linhas*/
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical; 
+    overflow: hidden;    
+}
+
+/* Ajuste do tamanho da fonte: título e texto */
+@media (max-width: 1400px) {
+    .titulos {
+        font-size: 3.6vw;
+    }
+
+    .texto {
+        font-size: 1.3vw;
+    }
+}
+
+/* Ajuste do tamanho da fonte: título e texto */
+/* Ajuste do tamanho do ícone do GitHub */
+/* Ajuste do tamanho e posição do hexágonos */
+@media (max-width: 950px) {
+    .titulos {
+        font-size: 4vw;
+    }
+
+    .texto {
+        font-size: 1.6vw;
+    }
+
+    .github_icon, .link {
+        width: 5.5vw;
+        margin-right: 3vw;
+    }
+
+    .hexagon {
+        width: 22vw;
+        height: 17vw;
+    }
+    
+    .hexagonos_linha1 {
+        grid-template-columns: repeat(3, 28%);
+        grid-template-rows: 15vw;
+    }
+
+    .hexagonos_linha2 {
+        grid-template-columns: repeat(2, 28%);
+    }
+
+    .img_area, .img_area_overlay {
+        width: 77%;
+        top: -8%;  
+    }
+}
+
+/* Ajuste do tamanho da fonte: título e texto */
+/* Ajuste da posição do título */
+/* Ajuste do tamanho do ícone do GitHub */
+/* Ajuste da posição do hexágonos */
+@media (max-width: 800px) {
+    .titulos {
+        margin-top: 13.5vw;
+        margin-bottom: 1vw;
+        font-size: 5.5vw;
+    }
+
+    .texto {
+        font-size: 2vw;
+    }
+
+    .github_icon, .link {
+        width: 7vw;
+    }
+
+    .hexagonos_linha1 {
+        grid-template-columns: repeat(3, 28%);
+        grid-template-rows: 15vw;
+    }
+
+    .hexagonos_linha2 {
+        grid-template-columns: repeat(2, 28%);
+    }
+
+    .imagem_arvore {
+        width: 17vw;
+    }
+
+    .medium_posts {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+
+    .medium_title {
+    font-size: 1.8vw;
+
+    /* Adiciona reticências para títulos com mais de 2 linhas*/
+    -webkit-line-clamp: 2;
+    }
+
+
+}
+
+/* Ajuste do tamanho da fonte: título e texto */
+/* Ajuste da posição do texto */
+/* Ajuste do tamanho e posição do ícone do GitHub */
+/* Ajuste do tamanho e posição do hexágonos */
+@media (max-width: 550px) {
+    .titulos {
+        font-size: 6vw;
+    }
+
+    .caixa_area {
+        width: 90%;
+        margin-bottom: 3vw;
+        border-radius: 5vw;
+    }
+
+    .texto {
+        font-size: 2.5vw;
+        margin-top: 4vw;
+        margin-bottom: 4vw;
+        margin-left: 4vw;
+        margin-right: 4vw;
+    }
+
+    .github_icon, .link {
+        width: 9vw;
+        margin-right: 4vw;
+    }
+
+    .hexagon {
+        width: 28vw;
+        height: 23vw;
+    }
+    
+    .hexagonos_linha1 {
+        grid-template-columns: repeat(3, 29.5%);
+        grid-template-rows: 19.5vw;
+    }
+
+    .hexagonos_linha2 {
+        grid-template-columns: repeat(2, 29.5%);
+    }
+
+    .img_area, .img_area_overlay {
+        width: 82%;
+        top: -9%;  
+    }
+
+    .imagem_arvore {
+        width: 20vw;
+    }
+
+    .arvore {
+        margin: 2vw;
+    }
+}
+
+/* Ajuste do tamanho da fonte: título e texto */
+@media (max-width: 400px) {
+    .titulos {
+        font-size: 8vw;
+    }
+
+    .texto {
+        font-size: 3.2vw;
+    }
+
+    .imagem_arvore {
+        width: 22.5vw;
+    }
+
+    .medium_posts {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+
+    .medium_title {
+        font-size: 2vw;
+    }
 }
