@@ -4,6 +4,7 @@
     text-align: center;
 
 }
+
 .parallax_img{
     width: 100vw;
 
@@ -16,7 +17,6 @@
     display: inline-block;
     background: rgba(0, 0, 0, 0.7);
 }
-
 
 .texto-superior{
     font-family: Open Sans;
@@ -32,6 +32,7 @@
 
 .saiba-mais{
     width: 25%;
+    box-shadow: 10px 5px 5px rgba(0,0,0,0.5);
     margin-top: 2vw;
     padding: 0.5vw;
     background: #F2994A;
@@ -45,6 +46,11 @@
     display: inline-block;
     color: white;
     border: none;
+    transition: 0.15s;
+}
+.saiba-mais:hover{
+    box-shadow: 0 0 0 rgba(0,0,0,0);
+    cursor: pointer;
 }
 
 .textos{

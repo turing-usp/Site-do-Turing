@@ -35,7 +35,7 @@ export default function AboutUs () {
     return (
         <div class='container'>
             <Cabecalho />
-            <h1 class='titulo_aboutus'>Sobre o Grupo Turing</h1>
+            <h1 class='primeiro_titulo_aboutus'>Sobre o Grupo Turing</h1>
             <p class='descricao_aboutus'>
                 Somos o grupo de extensão acadêmica
                 da Universidade de São Paulo

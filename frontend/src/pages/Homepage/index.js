@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import ReactDOM from 'react-dom';
+import {Link} from 'react-router-dom';
 import {Background, Parallax} from 'react-parallax';
 import fundo from "../../assets/background.png";
 import './styles.css';
@@ -26,7 +27,9 @@ export default function Homepage(){
                             </h1>
                         </div>
                         <br />
+                        <Link to="/AboutUs">
                         <button class="saiba-mais" href="#">Saiba mais</button>
+                        </Link>
                     </div>
                     <Background>
                         <img class='parallax_img' src={fundo} alt="fundo azul" />
