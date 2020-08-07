@@ -11,134 +11,177 @@ html, body {
     font-family: 'Oswald', sans-serif;  /* fonte default: Oswald, fallback para sans-serif, vale a pena colocarmos */
     font-style: normal;                 /* mais fontes como fallback antes de usarmos a sans-serif */
     font-weight: normal;
-    background-color: #EAF7FB
+    background-color: #EAF7FB;
 }
 
-.container{
+.container {
     margin-top: 3vw;
     font-size: 2vw;
 }
+
 
 /****************************/
 /* Estilização do Cabeçalho */
 /****************************/
 
-.cabecalho_logo{
-    margin-left: 3vw;
-    height: 8vw;
-    width: auto;
-}
-.text_cabecalho {
-    text-transform: uppercase;
-    font-size: 2vw;
-    margin-right: 3vw;
-    color: #EAF7FB;
-    text-decoration: none
-}
-  
-
-.rect_cabecalho {
-    font-size: 15.9px;
-    font-family: 'Open Sans';
-    width: 100%;
-    top: 0;
-    z-index:300;
-    width: 100%;
-    position: fixed;
-    height: 17vh;
-    background: #041846;
-    box-shadow: 0px 0.2em 0.2em rgba(0, 0, 0, 0.25);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.menu_btn{
-    display: none;
-    background-color: #041846;
-    margin-left: 0vw;
-    border: none;
-    height: 8vw;
-    cursor: pointer;
-}
-.turingebotao{
-    vertical-align: middle;
+.cabecalho {
     display: flex;
     flex-direction: row;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 7vw;
+    z-index: 1000;
+    justify-content: space-between;
+    align-items: center;
+    background: #041846;
+    box-shadow: 0 0.2em 0.2em rgba(0, 0, 0, 0.25);
 }
+
+.cabecalho_logo {
+    display: flex;
+    margin-left: 2vw;
+    height: 5.5vw;
+}
+
+.cabecalho_txt:link {
+    text-transform: uppercase;
+    font-size: 1.7vw;
+    margin-right: 3vw;
+    color: #EAF7FB;
+    transition: 0.1s;
+}
+
+.cabecalho_txt:visited {
+    color: #EAF7FB;
+}
+
+.cabecalho_txt:hover,
+.cabecalho_txt:focus,
+.cabecalho_txt:active {
+    cursor: pointer;
+    color: #F2994A;
+}
+
+/*
+Altera a cor do nome da página ativa no cabeçalho.
+!important foi utilizado para ignorar o override dado por :visited
+*/
+.pagina_ativa { 
+    color: #F2994A !important;
+}
+
 @media (max-width: 800px){
-    .menu_btn{
-        display: inline;
-        background-color: #041846;
-        margin-left: 0vw;
+    
+    .cabecalho {
+        justify-content: center;
+        height: max(8vw, 40px);
+        background: #041846;
+    }
+
+    .hamburguer_on {
+        position: absolute;
+        left: 0;
+    }
+
+    .hamburguer_btn {
+        height: max(8vw, 40px);
+        background-color: transparent;
         border: none;
-        height: 15vw;
+        outline: none;
         cursor: pointer;
     }
 
-    .cabecalho_logo{
-        margin-left: 3vw;
-        height: 15vw;
-        width: auto;
+    .cabecalho_logo {
+        height: max(7vw, 30px);
+        margin-left: 0;
     }
 
-    .text_cabecalho {
-        text-transform: uppercase;
-        font-size: 2.5vw;
-        margin-right: 3vw;
-        margin-top: 0px;
-        height: 115%;
-        width: 110%;
-        color: #EAF7FB;
-        text-decoration: none;
-        background: #041846;
-    }
-    .rect_cabecalho {
-        font-size: 15.9px;
-        width: 100%;
-        top: 0;
-        z-index:300;
-        width: 100%;
+    .sidebar_hidden {
         position: fixed;
-        height: 15vw;
-        background: #041846;
-        box-shadow: 0px 0.2em 0.2em rgba(0, 0, 0, 0.25);
+        height: 100%;
+        width: max(18vw, 90px);
+        background-color: #001136;
+
+        left: 100%;
+    }
+
+    .sidebar_shown {
+        position: fixed;
+        height: 100%;
+        width: max(18vw, 90px);
+        background-color: #001136;
+
+        animation: left2right 0.5s;
+        animation-fill-mode: forwards;
+    }
+
+    @keyframes left2right {
+        from {transform: translateX(-100%)};
+        to {transform: translateX(100%)};
+    }
+
+    .sidebar_hiding {
+        position: fixed;
+        height: 100%;
+        width: max(18vw, 90px);
+        background-color: #001136;     
+
+        animation: right2left 0.5s;
+        animation-fill-mode: forwards;
+    }
+
+    @keyframes right2left {
+        to {transform: translateX(-100%)};
+    }
+
+    .sidebar_items {
+        display: inline-grid;
+        margin-top: 1vh;
+        row-gap: 1vh;
+        height: max(50vh, 150px);
+        width: 100%;
+    }
+
+    .sidebar_btn {
         display: flex;
-        flex-direction: column;
+        justify-content: center;
         align-items: center;
-    }
-    .rotas_site{
-        display: flex;
-        flex-direction: column;
+        transition: 0.2s;
+        background-color: #041846;
     }
 
+    .sidebar_btn:hover, .sidebar_btn:active {
+        background-color: #051e5a;
+    }
+
+    .sidebar_btn:hover > .cabecalho_txt {
+        color: #F2994A
+    }
+
+    .cabecalho_txt:link {
+        position: absolute;
+        font-size: max(2.1vw, 11px);
+    }
 }
-
 
 a {
     color: #EAF7FB;
     text-decoration: none;
     outline: 0
 }
+
 a:visited {
     text-transform: inherit;
     text-decoration: none; 
     font-size: inherit;
     color: inherit
-
 }
-.text_cabecalho:hover {
-    transition-duration: 0.2s;
-    cursor: pointer;
-    color: #F2994A
-}
-
 
 
 /*************************/
 /* Estilização do Rodapé */
 /*************************/
-
 
 .rodape {
     width: 100%;
