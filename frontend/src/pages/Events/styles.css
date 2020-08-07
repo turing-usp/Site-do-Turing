@@ -87,3 +87,20 @@
 .wrapper{
     text-align: center;
 }
+    @media (max-width: 800px){
+        .description {
+            margin-top: 1em;
+            width: 80%;
+            font-size: 5vw;
+            margin: auto;
+            color: #929292;
+            text-align: center;
+            font-family: 'Open Sans';
+        }
+        .titulo_eventos{
+            font-size: 6.5vw;
+        }
+        .subtitulos{
+            font-size: 6vw;
+        }
+    }
