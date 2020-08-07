@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import ReactDOM from 'react-dom';
 import {Link} from 'react-router-dom';
+import WindowSizeListener from 'react-window-size-listener'
 import {Background, Parallax} from 'react-parallax';
 import fundo from "../../assets/background.png";
 import './styles.css';
@@ -14,10 +15,25 @@ import Rodape from '../../Tags/Rodape';
 
 
 export default function Homepage(){
+
+
+    const [isVisible, setIsVisible] = useState(false);
+
+        
+    useEffect(() => {
+        setIsVisible(window.innerWidth > 800);
+    },[window.innerWidth]);
+
+
+
+
     return(
         <div class='homepage_container'>
             <Cabecalho />
-                <Parallax style={{marginTop: "7.95vw"}}
+
+            <WindowSizeListener onResize={() => setIsVisible(window.innerWidth > 800)}>
+            </WindowSizeListener>
+                {isVisible && <Parallax style={{marginTop: "7vw"}}
                 strength={250}>
                     <div style={{height: '60vw', width: '100%'}}>
                         <div class="caixa-superior">
@@ -34,7 +50,20 @@ export default function Homepage(){
                     <Background>
                         <img class='parallax_img' src={fundo} alt="fundo azul" />
                     </Background>
-                </Parallax>
+                </Parallax>}
+
+                {!isVisible && 
+                <div class='imagem-mobile'>
+                    <div class="caixa-superior">
+                        <h1 class="texto-superior">
+                            O Naruto pode ser um pouco duro às vezes, talvez você não saiba disso,<br /> 
+                            mas o Naruto também cresceu sem pai...
+                        </h1>
+                    </div>
+                    <Link to="/AboutUs">
+                        <button class="saiba-mais" href="#">Saiba mais</button>
+                        </Link>
+                </div>}
             <div class='bloco_info'>
                 <img class="img" src={ialogo} alt="logo-ia" />
                 <div class='textos'>
@@ -45,13 +74,14 @@ export default function Homepage(){
                         e decidiu fazer alguma coisa a respeito!</h2>
                 </div>
             </div>
-                <Parallax 
+                {isVisible && <Parallax 
                 strength={250}>
                     <div style={{height: '45vw', width: '100%'}}/>
                     <Background  >
                         <img class='parallax_img' src={projeto} alt="projeto"></img>
                     </Background>
-                </Parallax>
+                </Parallax>}
+                {!isVisible && <img class='parallax_img' src={projeto} alt="projeto"></img>}
             <div class='bloco_info'>
                 <img class="img" src={evento} alt="evento" />
                 <div class='textos'>
@@ -64,14 +94,15 @@ export default function Homepage(){
                 </div>
             </div>
             <div>
-                <Parallax 
+                {isVisible && <Parallax 
                     strength={250}
                 >
                     <div style={{height: '45vw', width: '100%'}}/>
                     <Background>
                     <img class='parallax_img' src={computador} alt="foto computador"></img>
                     </Background>
-                </Parallax>
+                </Parallax>}
+                {!isVisible && <img class='parallax_img' src={computador} alt="foto computador"></img>}
             </div>
             <div class="bloco_info">
                 <div class="textos">
