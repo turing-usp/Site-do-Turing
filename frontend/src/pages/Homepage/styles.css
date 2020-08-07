@@ -9,6 +9,14 @@
     width: 100vw;
 
 }
+
+.imagem-mobile{
+    height: 60vw;
+    width: 100%;
+    margin-top: 7vw;
+    background-image: url("../../assets/background.png");
+}
+
 .caixa-superior{
     width: 75%;
     padding: 1.5vw;
