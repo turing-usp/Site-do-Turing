@@ -15,7 +15,7 @@
     text-align: center;
 }
 .titulo_aboutus{
-    margin-top: 2em;
+    margin-top: 2vh;
     font-size: 4vw;
     font-weight: 500;
     color: #F2994A;
@@ -24,12 +24,12 @@
 }
 .descricao_aboutus{
     display:inline-block;
-    width: 50vw;
+    width: 45%;
     margin-top: 1em;
     color: #929292;
     text-align:justify;
     font-family: 'Open Sans';
-    font-size: 2.5vw
+    font-size: 1.5vw
 }
 
 /*************************/
@@ -136,4 +136,20 @@ h2.tipos_de_membros:after {
     font-family: 'Open Sans';
     font-size: 1.5vw;
     margin-bottom: 0.5vw;
+}
+@media (max-width: 800px){
+    .primeiro_titulo_aboutus{
+        font-size: 6.5vw;
+    }
+    .descricao_aboutus{
+        width: 85%;
+        font-size: 5vw;
+    }
+    .titulo_aboutus{
+        font-size: 6vw;
+    }
+
+    h2.tipos_de_membros{
+        font-size: 7vw;
+    }
 }

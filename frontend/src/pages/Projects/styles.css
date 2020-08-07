@@ -1,6 +1,6 @@
 
 .titulo_projetos{
-    margin-top:4em;
+    margin-top:15vh;
     font-size: 3.6vw;
     font-weight: 500;
     color: #F2994A;
@@ -83,4 +83,22 @@ ul li p {
     display: inline-block;
     color: #737380;
     font-size: 1.5em;
+}
+
+/* Form */
+.proj_form{
+    font-size: 3.6vw;
+}
+
+@media (max-width: 800px){
+    .descricao_projetos{
+        font-size: 5vw;
+
+    }
+    .titulo_projetos{
+        font-size: 6.5vw;
+    }
+    .proj_form{
+        font-size: 4vw;
+    }
 }
