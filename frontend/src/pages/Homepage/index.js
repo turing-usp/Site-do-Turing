@@ -38,13 +38,13 @@ export default function Homepage(){
                     <div style={{height: '60vw', width: '100%'}}>
                         <div class="caixa-superior">
                             <h1 class="texto-superior">
-                            O Naruto pode ser um pouco duro às vezes, talvez você não saiba disso,<br /> 
-                            mas o Naruto também cresceu sem pai...
+                            Conheça o Grupo Turing: uma extensão universitária da Universidade de São Paulo (USP) que 
+                            acredita em gerar impacto disseminando, aplicando e estudando Inteligência Artificial
                             </h1>
                         </div>
                         <br />
                         <Link to="/AboutUs">
-                        <button class="saiba-mais" href="#">Saiba mais</button>
+                            <button class="saiba-mais" href="#">Saiba mais</button>
                         </Link>
                     </div>
                     <Background>
@@ -56,22 +56,23 @@ export default function Homepage(){
                 <div class='imagem-mobile'>
                     <div class="caixa-superior">
                         <h1 class="texto-superior">
-                            O Naruto pode ser um pouco duro às vezes, talvez você não saiba disso,<br /> 
-                            mas o Naruto também cresceu sem pai...
+                        Conheça o Grupo Turing: uma extensão universitária da Universidade de São Paulo (USP) que 
+                        acredita em gerar impacto disseminando, aplicando e estudando Inteligência Artificial
                         </h1>
                     </div>
                     <Link to="/AboutUs">
                         <button class="saiba-mais" href="#">Saiba mais</button>
-                        </Link>
+                    </Link>
                 </div>}
             <div class='bloco_info'>
                 <img class="img" src={ialogo} alt="logo-ia" />
                 <div class='textos'>
                     <h1 class="titulo">Aprenda IA</h1>
                     <h2 class="descricao">
-                        ...é o sonho dele e o Naruto daria a vida por isso sem hesitar.<br />
-                        Meu palpite é que ele se cansou de chorar<br />
-                        e decidiu fazer alguma coisa a respeito!</h2>
+                    Estude Inteligência Artificial e suas ramificações com conteúdos produzidos por nós. Temos desde 
+                    vídeos de Workshops e palestras, até nossos inúmeros posts no Medium, com códigos presentes no 
+                    nosso GitHub.
+                    </h2>
                 </div>
             </div>
                 {isVisible && <Parallax 
@@ -87,10 +88,9 @@ export default function Homepage(){
                 <div class='textos'>
                     <h1 class="titulo">Eventos</h1>
                     <h2 class="descricao">
-                        ...Mesmo assim eu nunca vi ele chorar,<br />
-                        ficar zangado ou se dar por vencido,<br />
-                        ele está sempre disposto a melhorar,<br />
-                        ele quer ser respeitado...</h2>
+                    Descubra as aplicações em vida real que realizamos a partir de nossos estudos e qual o impacto que 
+                    IA pode ter no mundo!
+                    </h2>
                 </div>
             </div>
             <div>
@@ -108,9 +108,9 @@ export default function Homepage(){
                 <div class="textos">
                     <h1 class="titulo">Projetos</h1>
                     <h2 class="descricao">
-                        ...é o sonho dele e o Naruto daria a vida por isso sem hesitar.<br />
-                        Meu palpite é que ele se cansou de chorar<br />
-                        e decidiu fazer alguma coisa a respeito!</h2>
+                        Fique por dentro dos próximos eventos do grupo, que visam disseminar conteúdos relacionados a IA na 
+                        comunidade paulistana e brasileira.
+                    </h2>
                 </div>
                 <img class="img" src={projetos} alt="projetos"></img>
             </div>

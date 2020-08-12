@@ -65,6 +65,7 @@
 
 .textos{
     display:block;
+    width: 60%;
 }
 
 .titulo{
@@ -128,6 +129,10 @@
         align-content: center;
     
         color: #F2F2F2;
+    }
+
+    .textos{
+        width: 80%;
     }
 
     .descricao{
