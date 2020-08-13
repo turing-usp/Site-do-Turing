@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import logo from '../../assets/logo.png';
 import github from '../../assets/github_icon.png';
 import linkedin from '../../assets/in.png';
+import grupo from "../../assets/grupo.JPG";
 import {FiMail} from 'react-icons/fi';
 import membro_padrao from "../../assets/avatar_placeholder.png";
 import './styles.css';
@@ -36,6 +37,7 @@ export default function AboutUs () {
         <div class='container'>
             <Cabecalho />
             <h1 class='primeiro_titulo_aboutus'>Sobre o Grupo Turing</h1>
+            <img src={grupo} class='group_pic'/>
             <p class='descricao_aboutus'>
                 Somos o grupo de extensão acadêmica
                 da Universidade de São Paulo
