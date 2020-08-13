@@ -1,4 +1,3 @@
-@import url('http://fonts.googleapis.com/css?family=Oswald');
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap');
 
 /*********************/
@@ -66,7 +65,7 @@ html, body {
 Altera a cor do nome da página ativa no cabeçalho.
 !important foi utilizado para ignorar o override dado por :visited
 */
-.pagina_ativa { 
+.texto_ativo { 
     color: #F2994A !important;
 }
 
@@ -118,7 +117,7 @@ Altera a cor do nome da página ativa no cabeçalho.
     .sidebar_items {
         display: inline-grid;
         grid-template-rows: repeat(5, 1fr 15px);
-        margin-top: 6.5px;
+        margin-top: 6.3px;
         height: max(45vh, 300px);
         width: 100%;
     }
@@ -128,12 +127,10 @@ Altera a cor do nome da página ativa no cabeçalho.
         justify-content: center;
         align-items: center;
         width: 100%;
-        margin-left: 50%;
-        transform: translateX(-50%);
         transition: 0.2s;
     }
 
-    .sidebar_btn:hover, .sidebar_btn:active {
+    .sidebar_btn:hover {
         background-color: #051e5a;
     }
 
@@ -141,15 +138,7 @@ Altera a cor do nome da página ativa no cabeçalho.
         color: #F2994A
     }
 
-    .pagina_ativa {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        height: 100%;
-        margin-left: 50%;
-        transform: translateX(-50%);
-        transition: 0.2s;
+    .btn_ativo {
         background-color: #041846;
     }
 
@@ -162,8 +151,10 @@ Altera a cor do nome da página ativa no cabeçalho.
     }
 
     .cabecalho_txt:link {
+        display: flex;
         position: absolute;
-        font-size: max(2.2vw, 13px);
+        margin: 0;
+        font-size: max(2.2vw, 13px);        
     }
 }
 
