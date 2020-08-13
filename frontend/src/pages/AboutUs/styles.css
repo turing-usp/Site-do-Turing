@@ -94,19 +94,27 @@ h2.tipos_de_membros:after {
 }
 
 .cartao{
-    margin: 0 auto;
-    display: flexbox;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    row-gap: 1vw;
+    column-gap: 1vw;
+    margin-top: 1vw;
+    display:flex;
     flex-direction: column;
-    box-shadow:0 0.01vw 0.01vw 0 rgba(0,0,0,0.2);
-    width: 80%;
-    margin-bottom: 5vw;
+    
+    padding: 1.5vw;    
+    border-radius: 2vw;
+    background-color: #d9f0fc;
+    color: #041846;
+    text-transform: uppercase;
+    font-size: 1.5vw;
 }
 .foto_membro{
     margin-top: 1vw;
 }
 
 .foto_membro img{
-    width: 40%;
+    width: 70%;
     height: auto;
 }
 
@@ -123,11 +131,12 @@ h2.tipos_de_membros:after {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    vertical-align: bottom;
 }
 
-.linkedin_membro img, .github_membro img{
+.linkedin_membro img, .github_membro img, .mail_icon img{
     width: auto;
-    height: 3vw;
+    height: 2vw;
     margin-left: 0.5vw;
 }
 
@@ -144,6 +153,8 @@ h2.tipos_de_membros:after {
     font-size: 1.5vw;
     margin-bottom: 0.5vw;
 }
+
+
 @media (max-width: 800px){
     .primeiro_titulo_aboutus{
         font-size: 6.5vw;
@@ -158,5 +169,17 @@ h2.tipos_de_membros:after {
 
     h2.tipos_de_membros{
         font-size: 7vw;
+    }
+
+    .cartao{
+        font-size: 5vw; 
+        height: 30vh;
+        margin-top: 3vh;
+    }
+
+    .linkedin_membro img, .github_membro img, .mail_icon img{
+        width: auto;
+        height: 7vw;
+        margin-left: 0.5vw;
     }
 }

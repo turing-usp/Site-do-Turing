@@ -4,7 +4,7 @@ import logo from '../../assets/logo.png';
 import github from '../../assets/github_icon.png';
 import linkedin from '../../assets/in.png';
 import grupo from "../../assets/grupo.JPG";
-import {FiMail} from 'react-icons/fi';
+import email from "../../assets/mail_icon.svg"
 import membro_padrao from "../../assets/avatar_placeholder.png";
 import './styles.css';
 import {FiPlus} from 'react-icons/fi'
@@ -78,16 +78,11 @@ export default function AboutUs () {
             {diretores.map(diretor => (
                 <div class="container_membro">
                 <div class="cartao">
-                    <span class="nome_membro">{diretor.name}</span>
+                    {diretor.name}
                     <div class="foto_membro"><img src={diretor.photoLink} alt="Membro"/></div>
                     <div class="contato_membro">
-                        <div class="email_membro">
-                            <a href={"mailto:"+ diretor.email}>
-                                    <FiMail size={10} color="#F2994A"/> 
-                            </a>
-                            {diretor.email}
-                        </div>
                         <div class="rede_membro">
+                            <a target="_blank" href={diretor.email}><div class="mail_icon"><img src={email} alt="github"/></div></a>
                             <a target="_blank" href={diretor.github}><div class="github_membro"><img src={github} alt="github"/></div></a>
                             <a target="_blank" href={diretor.linkedin}><div class="linkedin_membro"><img src={linkedin} alt="github"/></div></a>
                         </div>
@@ -104,17 +99,11 @@ export default function AboutUs () {
             <div class="container_membros">
             {membros.map(membro => (
                 <div class="container_membro">
-                <div class="cartao">
-                    <span class="nome_membro">{membro.name}</span>
+                <div class="cartao">{membro.name}
                     <div class="foto_membro"><img src={membro.photoLink} alt="Membro"/></div>
                     <div class="contato_membro">
-                        <div class="email_membro">
-                            <a href={"mailto:"+ membro.email}>
-                                    <FiMail size={10} color="#F2994A"/> 
-                            </a>
-                            {membro.email}
-                        </div>
                         <div class="rede_membro">
+                            <a target="_blank" href={membro.email}><div class="mail_icon"><img src={email} alt="github"/></div></a>
                             <a target="_blank" href={membro.github}><div class="github_membro"><img src={github} alt="github"/></div></a>
                             <a target="_blank" href={membro.linkedin}><div class="linkedin_membro"><img src={linkedin} alt="github"/></div></a>
                         </div>
@@ -126,22 +115,17 @@ export default function AboutUs () {
 
           
 
-            <h2 class="tipos_de_membros">Trainees</h2>
+            {trainees.length > 0 && <h2 class="tipos_de_membros">Trainees</h2>}
 
             <div class="container_membros">
             {trainees.map(trainee => (
                 <div class="container_membro">
                 <div class="cartao">
-                    <span class="nome_membro">{trainee.name}</span>
+                    {trainee.name}
                     <div class="foto_membro"><img src={trainee.photoLink} alt="Membro"/></div>
                     <div class="contato_membro">
-                        <div class="email_membro">
-                            <a href={"mailto:"+ trainee.email}>
-                                    <FiMail size={10} color="#F2994A"/> 
-                            </a>
-                            {trainee.email}
-                        </div>
                         <div class="rede_membro">
+                            <a target="_blank" href={trainee.email}><div class="mail_icon"><img src={email} alt="github"/></div></a>
                             <a target="_blank" href={trainee.github}><div class="github_membro"><img src={github} alt="github"/></div></a>
                             <a target="_blank" href={trainee.linkedin}><div class="linkedin_membro"><img src={linkedin} alt="github"/></div></a>
                         </div>
