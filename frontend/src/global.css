@@ -8,8 +8,8 @@
 html, body {
     margin: 0;
     padding: 0;
-    font-family: 'Oswald', sans-serif;  /* fonte default: Oswald, fallback para sans-serif, vale a pena colocarmos */
-    font-style: normal;                 /* mais fontes como fallback antes de usarmos a sans-serif */
+    font-family: 'Open Sans', sans-serif;  /* fonte default: Open Sans, fallback para sans-serif, vale a pena colocarmos */
+    font-style: normal;                    /* mais fontes como fallback antes de usarmos a sans-serif */
     font-weight: normal;
     background-color: #EAF7FB;
 }
@@ -34,7 +34,7 @@ html, body {
     z-index: 1000;
     justify-content: space-between;
     align-items: center;
-    background: #041846;
+    background-color: #041846;
     box-shadow: 0 0.2em 0.2em rgba(0, 0, 0, 0.25);
 }
 
@@ -57,8 +57,7 @@ html, body {
 }
 
 .cabecalho_txt:hover,
-.cabecalho_txt:focus,
-.cabecalho_txt:active {
+.cabecalho_txt:focus {
     cursor: pointer;
     color: #F2994A;
 }
@@ -75,8 +74,12 @@ Altera a cor do nome da página ativa no cabeçalho.
     
     .cabecalho {
         justify-content: center;
-        height: max(8vw, 40px);
-        background: #041846;
+        height: max(9vw, 50px);
+    }
+
+    .cabecalho_logo {
+        height: max(7vw, 35px);
+        margin-left: 0;
     }
 
     .hamburguer_on {
@@ -85,61 +88,38 @@ Altera a cor do nome da página ativa no cabeçalho.
     }
 
     .hamburguer_btn {
-        height: max(8vw, 40px);
+        height: max(9vw, 50px);
         background-color: transparent;
         border: none;
         outline: none;
         cursor: pointer;
     }
 
-    .cabecalho_logo {
-        height: max(7vw, 30px);
+    :root {
+        --sidebar_width: max(25vw, 150px);
+    }
+
+    .sidebar {
+        position: fixed;
+        height: 100%;
+        width: var(--sidebar_width);
+        background-color: #001136;
+        transition: 0.5s;
+    }
+
+    .show {
         margin-left: 0;
     }
-
-    .sidebar_hidden {
-        position: fixed;
-        height: 100%;
-        width: max(18vw, 90px);
-        background-color: #001136;
-
-        left: 100%;
-    }
-
-    .sidebar_shown {
-        position: fixed;
-        height: 100%;
-        width: max(18vw, 90px);
-        background-color: #001136;
-
-        animation: left2right 0.5s;
-        animation-fill-mode: forwards;
-    }
-
-    @keyframes left2right {
-        from {transform: translateX(-100%)};
-        to {transform: translateX(100%)};
-    }
-
-    .sidebar_hiding {
-        position: fixed;
-        height: 100%;
-        width: max(18vw, 90px);
-        background-color: #001136;     
-
-        animation: right2left 0.5s;
-        animation-fill-mode: forwards;
-    }
-
-    @keyframes right2left {
-        to {transform: translateX(-100%)};
+    
+    .hide {
+        margin-left: calc(-1 * var(--sidebar_width));
     }
 
     .sidebar_items {
         display: inline-grid;
-        margin-top: 1vh;
-        row-gap: 1vh;
-        height: max(50vh, 150px);
+        grid-template-rows: repeat(5, 1fr 15px);
+        margin-top: 6.5px;
+        height: max(45vh, 300px);
         width: 100%;
     }
 
@@ -147,8 +127,10 @@ Altera a cor do nome da página ativa no cabeçalho.
         display: flex;
         justify-content: center;
         align-items: center;
+        width: 100%;
+        margin-left: 50%;
+        transform: translateX(-50%);
         transition: 0.2s;
-        background-color: #041846;
     }
 
     .sidebar_btn:hover, .sidebar_btn:active {
@@ -159,9 +141,29 @@ Altera a cor do nome da página ativa no cabeçalho.
         color: #F2994A
     }
 
+    .pagina_ativa {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        margin-left: 50%;
+        transform: translateX(-50%);
+        transition: 0.2s;
+        background-color: #041846;
+    }
+
+    .separador {
+        width: 90%;
+        height: 0;
+        border: 0;
+        border-top: 3px solid #041846;
+        margin: auto;
+    }
+
     .cabecalho_txt:link {
         position: absolute;
-        font-size: max(2.1vw, 11px);
+        font-size: max(2.2vw, 13px);
     }
 }
 
