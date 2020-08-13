@@ -26,11 +26,11 @@ function Cabecalho () {
                 <img src={logo} class="cabecalho_logo" alt="turing" />
             </Link>
             {!isMobile && <div class="hamburguer_off">
-                <NavLink to='AboutUs' className='cabecalho_txt' activeClassName='pagina_ativa'>Quem somos</NavLink>                
-                <NavLink to='Events' className='cabecalho_txt' activeClassName='pagina_ativa'>Eventos</NavLink>
-                <NavLink to='Projects' className='cabecalho_txt' activeClassName='pagina_ativa'>Projetos</NavLink>
-                <NavLink to='LearnAI' className='cabecalho_txt' activeClassName='pagina_ativa'>Aprenda IA</NavLink>
-                <NavLink to='ContactUs' className='cabecalho_txt' activeClassName='pagina_ativa'>Fale Conosco</NavLink>
+                <NavLink to='AboutUs' className='cabecalho_txt' activeClassName='texto_ativo'>Quem somos</NavLink>                
+                <NavLink to='Events' className='cabecalho_txt' activeClassName='texto_ativo'>Eventos</NavLink>
+                <NavLink to='Projects' className='cabecalho_txt' activeClassName='texto_ativo'>Projetos</NavLink>
+                <NavLink to='LearnAI' className='cabecalho_txt' activeClassName='texto_ativo'>Aprenda IA</NavLink>
+                <NavLink to='ContactUs' className='cabecalho_txt' activeClassName='texto_ativo'>Fale Conosco</NavLink>
             </div>}
             {isMobile && <div class="hamburguer_on">
                 <button class="hamburguer_btn" onClick={() => setVisible(!isVisible)}>
@@ -39,25 +39,25 @@ function Cabecalho () {
                 </button>
                 <div class={`sidebar ${isVisible ? 'show' : 'hide' }`}>
                     <div class="sidebar_items">
-                        <NavLink class="sidebar_btn" to='AboutUs' activeClassName='pagina_ativa'>
-                            <NavLink to='AboutUs' className='cabecalho_txt' activeClassName='pagina_ativa'>Quem somos</NavLink>
+                        <NavLink to='AboutUs' className="sidebar_btn" activeClassName='btn_ativo'>
+                            <NavLink to='AboutUs' className='cabecalho_txt' activeClassName='texto_ativo'>Quem somos</NavLink>
                         </NavLink>
                         <hr class='separador'/>
-                        <Link class="sidebar_btn" to='Events'>
-                            <NavLink to='Events' className='cabecalho_txt' activeClassName='pagina_ativa'>Eventos</NavLink>
-                        </Link>
+                        <NavLink to='Events' className="sidebar_btn"activeClassName='btn_ativo'>
+                            <NavLink to='Events' className='cabecalho_txt' activeClassName='texto_ativo'>Eventos</NavLink>
+                        </NavLink>
                         <hr class='separador'/>
-                        <Link class="sidebar_btn" to='Projects'>
-                            <NavLink to='Projects' className='cabecalho_txt' activeClassName='pagina_ativa'>Projetos</NavLink>
-                        </Link>
+                        <NavLink to='Projects' className="sidebar_btn" activeClassName='btn_ativo'>
+                            <NavLink to='Projects' className='cabecalho_txt' activeClassName='texto_ativo'>Projetos</NavLink>
+                        </NavLink>
                         <hr class='separador'/>
-                        <Link class="sidebar_btn" to='LearnAI'>
-                            <NavLink to='LearnAI' className='cabecalho_txt' activeClassName='pagina_ativa'>Aprenda IA</NavLink>
-                        </Link>
+                        <NavLink to='LearnAI' className="sidebar_btn" activeClassName='btn_ativo'>
+                            <NavLink to='LearnAI' className='cabecalho_txt' activeClassName='texto_ativo'>Aprenda IA</NavLink>
+                        </NavLink>
                         <hr class='separador'/>
-                        <Link class="sidebar_btn" to='ContactUs'>
-                            <NavLink to='ContactUs' className='cabecalho_txt' activeClassName='pagina_ativa'>Fale Conosco</NavLink>
-                        </Link>
+                        <NavLink to='ContactUs' className="sidebar_btn" activeClassName='btn_ativo'>
+                            <NavLink to='ContactUs' className='cabecalho_txt' activeClassName='texto_ativo'>Fale Conosco</NavLink>
+                        </NavLink>
                     </div>
                 </div>
             </div>}
