@@ -7,21 +7,8 @@ import {AiOutlineMenu, AiOutlineClose} from 'react-icons/ai';
 
 function Cabecalho () {
 
-
     const [isMobile, setMobile] = useState(window.innerWidth <= 800)
     const [isVisible, setVisible] = useState(false);
-    const [isTransitioning, setTransitioning] = useState(false);
-
-    const toggleNav = () => {
-
-        setVisible(!isVisible);
-
-        setTransitioning(true)
-        setTimeout(() => {
-            setTransitioning(false)
-        }, 500)
-    };
-
     
     useEffect(() => {
         if (typeof window === 'undefined') return;      
@@ -32,7 +19,6 @@ function Cabecalho () {
           window.removeEventListener('resize', handleResize)
         };
       });
-
 
     return (
         <div class="cabecalho">
@@ -47,24 +33,28 @@ function Cabecalho () {
                 <NavLink to='ContactUs' className='cabecalho_txt' activeClassName='pagina_ativa'>Fale Conosco</NavLink>
             </div>}
             {isMobile && <div class="hamburguer_on">
-                <button class="hamburguer_btn" onClick={toggleNav}>
+                <button class="hamburguer_btn" onClick={() => setVisible(!isVisible)}>
                     {!isVisible && <AiOutlineMenu size={20} color="#F2994A"/>}
                     {isVisible && <AiOutlineClose size={20} color="#F2994A"/>}
                 </button>
-                <div class={`sidebar${isVisible ? '_shown' : (isTransitioning ? '_hiding' : '_hidden')}`}>
+                <div class={`sidebar ${isVisible ? 'show' : 'hide' }`}>
                     <div class="sidebar_items">
-                        <Link class="sidebar_btn" to='AboutUs'>
+                        <NavLink class="sidebar_btn" to='AboutUs' activeClassName='pagina_ativa'>
                             <NavLink to='AboutUs' className='cabecalho_txt' activeClassName='pagina_ativa'>Quem somos</NavLink>
-                        </Link>
+                        </NavLink>
+                        <hr class='separador'/>
                         <Link class="sidebar_btn" to='Events'>
                             <NavLink to='Events' className='cabecalho_txt' activeClassName='pagina_ativa'>Eventos</NavLink>
                         </Link>
+                        <hr class='separador'/>
                         <Link class="sidebar_btn" to='Projects'>
                             <NavLink to='Projects' className='cabecalho_txt' activeClassName='pagina_ativa'>Projetos</NavLink>
                         </Link>
+                        <hr class='separador'/>
                         <Link class="sidebar_btn" to='LearnAI'>
                             <NavLink to='LearnAI' className='cabecalho_txt' activeClassName='pagina_ativa'>Aprenda IA</NavLink>
                         </Link>
+                        <hr class='separador'/>
                         <Link class="sidebar_btn" to='ContactUs'>
                             <NavLink to='ContactUs' className='cabecalho_txt' activeClassName='pagina_ativa'>Fale Conosco</NavLink>
                         </Link>
