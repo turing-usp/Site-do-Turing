@@ -11,6 +11,7 @@ html, body {
     font-style: normal;                    /* mais fontes como fallback antes de usarmos a sans-serif */
     font-weight: normal;
     background-color: #EAF7FB;
+    color: #929292;
 }
 
 .container {
@@ -70,6 +71,10 @@ Altera a cor do nome da página ativa no cabeçalho.
 }
 
 @media (max-width: 800px){
+
+    html, body {
+        font-size: 5vw;
+    }
     
     .cabecalho {
         justify-content: center;

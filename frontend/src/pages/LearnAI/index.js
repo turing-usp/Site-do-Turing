@@ -232,8 +232,11 @@ export default function LearnAI () {
                 <div class="texto">
                     Quer aprender Data Science/IA e não sabe por onde começar? <br/>
                     Dê uma olhada na Árvore de Habilidades do grupo Turing! <br/>
-                    Os itens clicáveis te levam a uma página no github onde você pode <br/>
-                    conferir um exemplo daquele conceito          
+                    <br/>
+                <a href='https://github.com/GrupoTuring/Arvore-de-Habilidades' target="_blank" class="botao_arvore_github">
+                    <span class="text_button_arvore">Acesse a árvore no github</span>
+                    <img class = 'im_github_botao'src={github}/>
+                </a>
                 </div>
                 <div>
                     <iframe class="coggle_arvore" src="https://embed.coggle.it/diagram/XO2xElTTBjb9Mduz/709359e9f455d0aa8e1f1539d84693b3289686cd3efad7ecd94a441aa6bb488e" allowfullscreen />

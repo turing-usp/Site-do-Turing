@@ -157,6 +157,42 @@
     margin-top: 1vw;
 }
 
+.botao_arvore_github{
+    width: 40%;
+    box-shadow: 0.2vh 0.5vh 0.5vh rgba(0,0,0,0.5);
+    margin-top: 2vw;
+    padding: 0.5vw;
+    background: #F2994A;
+    border-radius: 30px;
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.5vw;
+    line-height: 3vw;
+    text-align: center;
+    display: inline-block;
+    border: none;
+    transition: 0.15s;
+    vertical-align: middle;
+}
+.botao_arvore_github a:visited,  a:link{
+    text-decoration: none;
+  }
+
+.text_button_arvore{
+    display: inline-block;
+    vertical-align: middle;
+    line-height: normal;
+    color: white;
+}
+
+.im_github_botao{
+    width: 3vw;
+    margin-right: 3%;
+    margin-left: 3.5%;
+    vertical-align: middle;
+}
+
 .coggle_arvore {
     margin-top: 1vw;
     width: 85%;
@@ -242,5 +278,21 @@
     .medium_title {    
         /* Adiciona reticências para títulos com mais de 1 linha*/
         -webkit-line-clamp: 1;
+    }
+    .coggle_arvore {
+        display: none;
+    }
+
+    .botao_arvore_github{
+        width: 70%;
+        font-size: 4.5vw;
+        padding: 2vw;
+    }
+    .im_github_botao{
+        width: 5vw;
+    }
+
+    .texto{
+        font-size: 4vw;
     }
 }
