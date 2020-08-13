@@ -7,13 +7,20 @@
     flex-direction: column;
 }
 .primeiro_titulo_aboutus{
-    margin-top: 4em;
+    margin-top: 4vh;
     font-size: 4vw;
     font-weight: 500;
     color: #F2994A;
     text-shadow: 0.03em 0.03em 0.03em gray;
     text-align: center;
+
 }
+
+.group_pic{
+    filter: grayscale(100%);
+    width: 100%;
+}
+
 .titulo_aboutus{
     margin-top: 2vh;
     font-size: 4vw;
