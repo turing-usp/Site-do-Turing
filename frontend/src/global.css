@@ -186,13 +186,13 @@ a:visited {
     background: #041846;
     display: flex;
     justify-content: space-between;
-    margin-top: 100px;
+    margin-top: 0.05vw;
     align-items: center
 }
 .rodape_logo2{
     padding: 3vw;
     width: auto;
-    height: 8vw;
+    height: 6vw;
 }
 .rodape_social{
     padding: 1vw;
@@ -206,16 +206,17 @@ a:visited {
     font-family: 'Open Sans';
     font-style: normal;
     font-weight: bold;
-    font-size: 2.3vw;
-    line-height: 2.5vw;
+    font-size: 1.5vw;
+    line-height: 2vw;
     color: #FFFFFF;
     padding: 1vw;
 }
 
 .link_rodape {
-    width: 4.3vw;
-    height: 4.3vw;
-    margin-right: 0.3vw;
+    width: 3.3vw;
+    height: 3.3vw;
+    margin-right: 0.8vw;
+    margin-top: -2vw;
     margin-left: 0.3vw;
     transition: 0.025s;
     border-radius: 3vw;
@@ -230,15 +231,16 @@ a:visited {
     font-family: 'Open Sans';
     font-weight: bold;
     font-style: normal;
-    font-size: 2.8vw;
-    line-height: 3vw;
+    font-size: 2vw;
+    line-height: 2vw;
     color: #FFFFFF
 }
 .location_text {
     font-style: normal;
+    margin-top: -2vw;
     font-weight: bold;
-    font-size: 1.8vw;
-    line-height: 1.8vw;
+    font-size: 1.1vw;
+    line-height: 1.2vw;
     color: #FFFFFF
 }
 @media (max-width: 800px){
@@ -252,28 +254,18 @@ a:visited {
         padding: 3vw;
         width: 34vw;
         height: auto;
+        margin-bottom: -5vw;
     }
     .rodape_social_box{
-        width: 100%;
-        background: #F5761D;
-        border-radius: 5vw;
-        text-align: center;
-        font-family: 'Open Sans';
-        font-style: normal;
-        font-weight: bold;
-        font-size: 5.5vw;
-        line-height: 2.5vw;
-        color: #FFFFFF;
-        padding: 3vw;
-        margin-left: auto;
-        margin-left: auto;
+        display: none;
     }
 
     .link_rodape {
         width: 10vw;
         height: auto;
+        margin-top: -13vw;
         margin-right: 1vw;
-        margin-left: 1vw;
+        margin-left: 3.1vw;
         transition: 0.025s;
         border-radius: 3vw;
     }
@@ -284,8 +276,18 @@ a:visited {
         font-family: 'Open Sans';
         font-weight: bold;
         font-style: normal;
-        font-size: 2.8vw;
-        color: #FFFFFF
+        font-size: 110%;
+        color: #FFFFFF;
+        margin-top: -9vw;
+    }
+
+    .location_text {
+        font-style: normal;
+        font-weight: bold;
+        font-size: 60%;
+        line-height: 100%;
+        color: #FFFFFF;
+        margin-top: -3vw;
     }
    
 }
