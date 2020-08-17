@@ -82,7 +82,7 @@ export default function AboutUs () {
                     <div class="foto_membro"><img src={diretor.photoLink} alt="Membro"/></div>
                     <div class="contato_membro">
                         <div class="rede_membro">
-                            <a target="_blank" href={diretor.email}><div class="mail_icon"><img src={email} alt="github"/></div></a>
+                            <a target="_blank" href={"mailto:" + diretor.email}><div class="mail_icon"><img src={email} alt="github"/></div></a>
                             <a target="_blank" href={diretor.github}><div class="github_membro"><img src={github} alt="github"/></div></a>
                             <a target="_blank" href={diretor.linkedin}><div class="linkedin_membro"><img src={linkedin} alt="github"/></div></a>
                         </div>
@@ -103,7 +103,7 @@ export default function AboutUs () {
                     <div class="foto_membro"><img src={membro.photoLink} alt="Membro"/></div>
                     <div class="contato_membro">
                         <div class="rede_membro">
-                            <a target="_blank" href={membro.email}><div class="mail_icon"><img src={email} alt="github"/></div></a>
+                            <a target="_blank" href={"mailto:" + membro.email}><div class="mail_icon"><img src={email} alt="github"/></div></a>
                             <a target="_blank" href={membro.github}><div class="github_membro"><img src={github} alt="github"/></div></a>
                             <a target="_blank" href={membro.linkedin}><div class="linkedin_membro"><img src={linkedin} alt="github"/></div></a>
                         </div>
@@ -125,7 +125,7 @@ export default function AboutUs () {
                     <div class="foto_membro"><img src={trainee.photoLink} alt="Membro"/></div>
                     <div class="contato_membro">
                         <div class="rede_membro">
-                            <a target="_blank" href={trainee.email}><div class="mail_icon"><img src={email} alt="github"/></div></a>
+                            <a target="_blank" href={"mailto:" + trainee.email}><div class="mail_icon"><img src={email} alt="github"/></div></a>
                             <a target="_blank" href={trainee.github}><div class="github_membro"><img src={github} alt="github"/></div></a>
                             <a target="_blank" href={trainee.linkedin}><div class="linkedin_membro"><img src={linkedin} alt="github"/></div></a>
                         </div>

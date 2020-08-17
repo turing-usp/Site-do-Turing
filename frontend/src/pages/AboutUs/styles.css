@@ -101,14 +101,20 @@ h2.tipos_de_membros:after {
     margin-top: 1vw;
     display:flex;
     flex-direction: column;
-    
     padding: 1.5vw;    
     border-radius: 2vw;
     background-color: #d9f0fc;
     color: #041846;
     text-transform: uppercase;
     font-size: 1.5vw;
+    transition: width 1s;
 }
+
+.cartao:hover{
+    background-color:#97d7fa;
+    transform: scale(1.1);
+}
+
 .foto_membro{
     margin-top: 1vw;
 }
@@ -138,6 +144,11 @@ h2.tipos_de_membros:after {
     width: auto;
     height: 2vw;
     margin-left: 0.5vw;
+    transition: width 1s;
+}
+
+.linkedin_membro:hover img, .github_membro:hover img, .mail_icon:hover img{
+    transform: scale(1.2);
 }
 
 .rede_membro{
@@ -173,8 +184,10 @@ h2.tipos_de_membros:after {
 
     .cartao{
         font-size: 5vw; 
-        height: 30vh;
-        margin-top: 3vh;
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 5%;
     }
 
     .linkedin_membro img, .github_membro img, .mail_icon img{
