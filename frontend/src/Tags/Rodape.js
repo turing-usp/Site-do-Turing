@@ -2,13 +2,15 @@ import React, { useEffect, useState } from "react";
 import ReactDOM from 'react-dom';
 import {Link} from "react-router-dom"
 import logo2 from '../assets/logo2.png';
-import insta from '../assets/insta.png';
-import fb from '../assets/fb.png';
-import yt from '../assets/yt.png';
-import medium from '../assets/medium_icon.png';
-import github from '../assets/github_icon.png';
+
+import instagram from '../assets/instagram.png';
+import facebook from '../assets/facebook.png';
+import youtube from '../assets/youtube.png';
+import medium from '../assets/medium.png';
+import github from '../assets/github.png';
+import linkedin from '../assets/linkedin.png';
+
 import location from '../assets/add_location_24px.svg'
-import linkedin from '../assets/in.png';
 
 function Rodape() {
     return (
@@ -17,9 +19,9 @@ function Rodape() {
             <div class='rodape_social'>
                     <p class='rodape_social_box'>Siga-nos nas redes sociais</p>
                 <br/>
-                <a target='_blank'href='https://www.instagram.com/grupoturing.usp/'><img src={insta} class="link_rodape"/></a>
-                <a target='_blank'href='https://pt-br.facebook.com/grupoturing.usp/'><img src={fb} class="link_rodape"/></a>
-                <a target='_blank'href='https://www.youtube.com/channel/UCIZSLh8_ST5np3k60qWOiAA'><img src={yt} class="link_rodape"/></a>
+                <a target='_blank'href='https://www.instagram.com/grupoturing.usp/'><img src={instagram} class="link_rodape"/></a>
+                <a target='_blank'href='https://pt-br.facebook.com/grupoturing.usp/'><img src={facebook} class="link_rodape"/></a>
+                <a target='_blank'href='https://www.youtube.com/channel/UCIZSLh8_ST5np3k60qWOiAA'><img src={youtube} class="link_rodape"/></a>
                 <a target='_blank'href='https://medium.com/turing-talks'><img src={medium} class="link_rodape"/></a>
                 <a target='_blank'href='https://github.com/GrupoTuring'><img src={github} class="link_rodape"/></a>
                 <a target='_blank'href='https://www.linkedin.com/company/grupo-turing/?originalSubdomain=br'><img src={linkedin} class="link_rodape"/></a>

@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import ReactDOM from 'react-dom';
 import logo from '../../assets/logo.png';
-import github from '../../assets/github_icon.png';
-import linkedin from '../../assets/in.png';
+import github from '../../assets/github.png';
+import linkedin from '../../assets/linkedin.png';
 import {FiMail} from 'react-icons/fi';
 import membro_padrao from "../../assets/avatar_placeholder.png";
 import './styles.css';
