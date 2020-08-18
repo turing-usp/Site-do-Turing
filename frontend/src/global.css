@@ -182,24 +182,22 @@ a:visited {
 /*************************/
 
 .rodape {
-    width: 100%;
     background: #041846;
+    justify-content: space-evenly;
     display: flex;
-    justify-content: space-between;
     margin-top: 0.05vw;
     align-items: center
 }
 .rodape_logo2{
     padding: 3vw;
-    width: auto;
-    height: 6vw;
+    width: 15vw;
+    height: auto;
 }
 .rodape_social{
     padding: 1vw;
     text-align: center
 }
 .rodape_social_box{
-    width: 100%;
     background: #F5761D;
     border-radius: 30px;
     text-align: center;
@@ -215,9 +213,8 @@ a:visited {
 .link_rodape {
     width: 3.3vw;
     height: 3.3vw;
-    margin-right: 0.8vw;
-    margin-top: -2vw;
-    margin-left: 0.3vw;
+    margin-right: 0.5vw;
+    margin-left: 0.5vw;
     transition: 0.025s;
     border-radius: 3vw;
 }
@@ -226,7 +223,7 @@ a:visited {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5)
 }
 .location {
-    padding: 1vw;
+    width: 15vw;
     text-align: left;
     font-family: 'Open Sans';
     font-weight: bold;
