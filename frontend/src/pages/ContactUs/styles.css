@@ -88,11 +88,7 @@
   animation: fadein 1s;
 }
 
-@media (max-width: 800px) {
-  .icon{
-    display: none;
-  }
-}
+
 
 @keyframes fadein {
   from {opacity: 0};
@@ -173,13 +169,15 @@
 .faq_and_answer {
   display:flex;
   flex-direction: column;
-  margin: auto;
-  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 5vw;
+  width: 70%;
 }
 
 .title_faqs {
-  margin-top: 2em;
-  font-size: 3em;
+  margin-top: 5vw;
+  font-size: 5vw;
   font-weight: 500;
   color: #F2994A;
   text-shadow: 0.03em 0.03em 0.03em gray;
@@ -187,11 +185,15 @@
 
 .faq_box {
   display: flex;
-  
   flex-direction: column;
-  margin-top: 1em;
-  font-size: 1.5em;
+  margin-top: 1.5vw;
+  text-align: left;
+  font-size: 1.5vw;
   color: #041846;
+}
+
+.button_faq{
+  height: 2.5vw;
 }
 
 .question_and_btn {
@@ -211,20 +213,37 @@
   background: 0em;
 }
 
+
 .btnAnswer:active {
   text-shadow: 0 5px #666;
 }
 
-.answer_show, .answer_hidden {
-  visibility: visible;
-  font-size: 0.8em;
+.answer_show {
+  display: block;
+  margin-bottom: 5vw;
+  font-size: 1.5vw;
   color: #041846;
   opacity: 0.8;
-  margin-top: 0px;
-  margin-bottom: 50px;
   text-align: left;
 }
 
 .answer_hidden {
-  visibility: hidden;
+  display: none;
+}
+
+@media (max-width: 800px) {
+  .icon{
+    display: none;
+  }
+  .faq_box{
+    font-size: 5vw;
+  }
+
+  .button_faq{
+    height: 7vw;
+  }
+
+  .answer_show{
+    font-size: 5vw;
+  }
 }

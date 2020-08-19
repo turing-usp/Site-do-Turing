@@ -10,6 +10,7 @@ import {AiFillFileText} from 'react-icons/ai'
 import check from '../../assets/check.gif'
 import Cabecalho from '../../Tags/Cabecalho.js'
 import Rodape from '../../Tags/Rodape.js'
+import plussign from "../../assets/plus.svg"
 
 
 import api from '../../services/api.js'
@@ -259,7 +260,7 @@ export default function ContactUs () {
                     <div class='question_and_btn'>
                         <p class='question' onClick={() => showAnswer(index)}>{question}</p>
                         <button class="btnAnswer" onClick={() => showAnswer(index)}>
-                            <FiPlus size='2.5vw' color="#F2994A"/>
+                            <img class="button_faq" src={plussign}/>
                         </button>
                     </div>
                     <p class={`answer${questionNumber === index ? '_show' : '_hidden'}`}>{answer}</p>
