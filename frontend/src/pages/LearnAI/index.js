@@ -91,7 +91,7 @@ export default function LearnAI () {
                         Usamos todo esse potencial para criar aplicações que melhorem processos antes não automatizados.
                         Atualmente, trabalhamos em um sistema de reconhecimento e codificação de rostos para uma empresa parceira.
                         </p>  
-                        <a  href='https://stackoverflow.com/admin.php' target="_blank">
+                        <a href='' target='_blank' rel='noopener noreferrer'>
                             <img class='github orange' src={github}/>
                         </a>
                     </div>
@@ -107,7 +107,7 @@ export default function LearnAI () {
                         superior. Algumas dessas são: extração de informação, classificação de texto, análise de sentimentos, 
                         tradução automática, dentre outras coisas.
                         </p>
-                        <a  href='https://stackoverflow.com/admin.php' target="_blank">
+                        <a href='' target='_blank' rel='noopener noreferrer'>
                             <img class='github orange' src={github} alt='github'/>
                         </a>
                     </div>
@@ -121,7 +121,7 @@ export default function LearnAI () {
                         procura sempre se aproximar de ONGs, com o intuito de produzir resultados que tenham um impacto 
                         positivo na sociedade.
                         </p>
-                        <a  href='https://stackoverflow.com/admin.php' target="_blank">
+                        <a href='' target='_blank' rel='noopener noreferrer'>
                             <img class='github orange' src={github} alt='github'/>
                         </a>
                     </div>
@@ -135,7 +135,7 @@ export default function LearnAI () {
                         utilizados. Tudo isso através de cursos, implementações de papers, competições, e visitas a 
                         gestoras quantitativas e outras empresas do setor.
                         </p>
-                        <a  href='https://stackoverflow.com/admin.php' target="_blank">
+                        <a href='' target='_blank' rel='noopener noreferrer'>
                             <img class='github blue' src={github} alt='github'/>
                         </a>
                     </div>
@@ -151,7 +151,7 @@ export default function LearnAI () {
                     áreas, desde o controle de jogos, robôs e veículos, até tarefas como a redução de gastos energéticos 
                     com ar condicionado.
                     </p>
-                        <a  href='https://stackoverflow.com/admin.php' target="_blank">
+                        <a href='' target='_blank' rel='noopener noreferrer'>
                             <img class='github blue' src={github} alt='github'/>
                         </a>
                     </div>
@@ -233,7 +233,7 @@ export default function LearnAI () {
                     Quer aprender Data Science/IA e não sabe por onde começar? <br/>
                     Dê uma olhada na Árvore de Habilidades do grupo Turing! <br/>
                     <br/>
-                <a href='https://github.com/GrupoTuring/Arvore-de-Habilidades' target="_blank" class="botao_arvore_github">
+                <a href='https://github.com/GrupoTuring/Arvore-de-Habilidades' target="_blank" class="botao_arvore_github" rel='noopener noreferrer'>
                     <span class="text_button_arvore">Acesse a árvore no github</span>
                     <img class = 'im_github_botao'src={github}/>
                 </a>
@@ -247,7 +247,7 @@ export default function LearnAI () {
                 <span class="titulo">Artigos do Medium</span>
                 <div class='medium_posts'>
                     {posts.map(post => (
-                        <a target='_blank' class='post' href={post.guid} key={post.guid}>
+                        <a target='_blank' class='post' href={post.guid} key={post.guid} rel='noopener noreferrer'>
                             <div class='img_container'>
                                 <img class ='medium_img' src={post.thumbnail} />
                             </div>

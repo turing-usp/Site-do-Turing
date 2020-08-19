@@ -46,9 +46,12 @@
 }
 
 .github {
+    display: none;
+    /*
     display: flex;
     margin-right: max(13px, 2vw);
     width: max(4vw, 32px);
+    */
 }
 
 .orange {
