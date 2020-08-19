@@ -19,7 +19,7 @@ export default function Homepage(){
 
     const [isVisible, setIsVisible] = useState(false);
 
-        
+
     useEffect(() => {
         setIsVisible(window.innerWidth > 800);
     },[window.innerWidth]);
@@ -105,6 +105,7 @@ export default function Homepage(){
                 {!isVisible && <img class='parallax_img' src={computador} alt="foto computador"></img>}
             </div>
             <div class="bloco_info">
+                <img class="img" src={projetos} alt="projetos" />
                 <div class="textos">
                     <h1 class="titulo">Projetos</h1>
                     <h2 class="descricao">
@@ -112,7 +113,6 @@ export default function Homepage(){
                         comunidade paulistana e brasileira.
                     </h2>
                 </div>
-                <img class="img" src={projetos} alt="projetos"></img>
             </div>
             <Rodape />
         </div>
