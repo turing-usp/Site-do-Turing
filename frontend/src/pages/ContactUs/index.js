@@ -26,14 +26,14 @@ export default function ContactUs () {
 
     const [inputs, updateInputs] = useState({
         'name' : '',
-        'mail' : '',
+        'email' : '',
         'motivation' : '',
         'entity' : '',
         'message' : ''
     });
     const [errors, updateErrors] = useState({
         'name' : '',
-        'mail' : '',
+        'email' : '',
         'motivation' : '',
         'message' : ''
     });
@@ -59,7 +59,7 @@ export default function ContactUs () {
 
             const toBackend = {
                 "contactName" : inputs.name,
-                "mail" : inputs.mail,
+                "email" : inputs.email,
                 "motivation" : inputs.motivation,
                 "entity" : inputs.entity,
                 "message" : inputs.message,
@@ -68,7 +68,7 @@ export default function ContactUs () {
     
             updateInputs({
                 'name' : '',
-                'mail' : '',
+                'email' : '',
                 'motivation' : '',
                 'entity' : '',
                 'message' : ''
@@ -100,8 +100,8 @@ export default function ContactUs () {
             }
         }
 
-        if (inputs['mail'] && !/\S+@\S+\.\S+/.test(inputs['mail'])) {
-            errors['mail'] = 'E-mail inválido'
+        if (inputs['email'] && !/\S+@\S+\.\S+/.test(inputs['email'])) {
+            errors['email'] = 'E-mail inválido'
         }
 
         updateErrors({...errors})
@@ -199,13 +199,13 @@ export default function ContactUs () {
                             <MdEmail class='icon' />
                         </div>
                         <input
-                        name='mail'
-                        class={`field ${errors['mail'] ? 'error' : ''}`}
-                        value={inputs.mail}
+                        name='email'
+                        class={`field ${errors['email'] ? 'error' : ''}`}
+                        value={inputs.email}
                         onChange={updateField}
                         placeholder='E-mail *' />
-                        {errors['mail'] && <div class='txt_ctr'>
-                            <p class='txt_error'>{errors['mail']}</p>
+                        {errors['email'] && <div class='txt_ctr'>
+                            <p class='txt_error'>{errors['email']}</p>
                         </div>}             
                     </div>
                     <div class='field_ctr'>
