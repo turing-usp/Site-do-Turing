@@ -4,7 +4,7 @@ const mailjet = require('node-mailjet')
     .connect(config.secrets.MAILJET_PUBLIC_API_KEY, config.secrets.MAILJET_SECRET_API_KEY)
 
 const sendEmail = function(name, email, entity, motivation, message){
-    const TURING_EMAIL = ""
+    const TURING_EMAIL = "turing.usp@gmail.com"
     const FROM_NAME = name
     const TO_NAME = "Grupo Turing"
     let request = mailjet
