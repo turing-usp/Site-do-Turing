@@ -36,6 +36,12 @@ html, body {
     align-items: center;
     background-color: #041846;
     box-shadow: 0 0.2em 0.2em rgba(0, 0, 0, 0.25);
+    transition: 0.2s;
+}
+
+.transparente {
+    background-color: transparent;
+    box-shadow: none;
 }
 
 .cabecalho_logo {
@@ -59,7 +65,7 @@ html, body {
 .cabecalho_txt:hover,
 .cabecalho_txt:focus {
     cursor: pointer;
-    color: #F2994A;
+    color: #FC8300;
 }
 
 /*
@@ -67,7 +73,7 @@ Altera a cor do nome da página ativa no cabeçalho.
 !important foi utilizado para ignorar o override dado por :visited
 */
 .texto_ativo { 
-    color: #F2994A !important;
+    color: #FC8300 !important;
 }
 
 @media (max-width: 800px){
@@ -111,11 +117,11 @@ Altera a cor do nome da página ativa no cabeçalho.
         transition: 0.5s;
     }
 
-    .show {
+    .shown {
         margin-left: 0;
     }
     
-    .hide {
+    .hidden {
         margin-left: calc(-1 * var(--sidebar_width));
     }
 
@@ -140,7 +146,7 @@ Altera a cor do nome da página ativa no cabeçalho.
     }
 
     .sidebar_btn:hover > .cabecalho_txt {
-        color: #F2994A
+        color: #FC8300
     }
 
     .btn_ativo {
