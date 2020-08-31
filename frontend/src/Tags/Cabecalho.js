@@ -3,6 +3,7 @@ import { Link, NavLink } from 'react-router-dom';
 import logo from '../assets/logo.png';
 import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai';
 
+
 function Cabecalho () {
 
     const [isMobile, setMobile] = useState(window.innerWidth <= 800)
@@ -19,11 +20,11 @@ function Cabecalho () {
         return () => {
           window.removeEventListener('resize', handleResize)
         };
-    });
+    }, []);
     
-    useEffect(() => {
+    useEffect(() => {       
 
-        if (window.location.href !== 'https://sitegrupoturing.netlify.app/') {
+        if (window.location.pathname !== '/') {
             setAtTop(false)
             return
         } else {
