@@ -32,6 +32,8 @@ export default function AboutUs () {
             setTrainees(response.data);
         });
         }, []);
+        
+        
     
     return (
         <div class='container'>
@@ -78,7 +80,7 @@ export default function AboutUs () {
             {diretores.map(diretor => (
                 <div class="container_membro">
                 <div class="cartao">
-                    {diretor.name}
+                    <div class="member_name">{diretor.name}</div>
                     <div class="foto_membro"><img src={diretor.photoLink} alt="Membro"/></div>
                     <div class="contato_membro">
                         <div class="rede_membro">
@@ -99,7 +101,8 @@ export default function AboutUs () {
             <div class="container_membros">
             {membros.map(membro => (
                 <div class="container_membro">
-                <div class="cartao">{membro.name}
+                <div class="cartao">
+                <div class="member_name">{membro.name}</div>
                     <div class="foto_membro"><img src={membro.photoLink} alt="Membro"/></div>
                     <div class="contato_membro">
                         <div class="rede_membro">
@@ -121,7 +124,7 @@ export default function AboutUs () {
             {trainees.map(trainee => (
                 <div class="container_membro">
                 <div class="cartao">
-                    {trainee.name}
+                <div class="member_name">{trainee.name}</div>
                     <div class="foto_membro"><img src={trainee.photoLink} alt="Membro"/></div>
                     <div class="contato_membro">
                         <div class="rede_membro">
