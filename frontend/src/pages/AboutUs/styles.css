@@ -84,17 +84,17 @@ h2.tipos_de_membros:after {
     align-self: center;
     justify-self: center;
     list-style: none;
+    width: 95%;
 }
 .container_membro{
     justify-self: center;
     padding:0.01vw 0.01vw;
-    width: 90%;
+    width: 80%;
     border-color: #041846;
     align-items: center;
 }
 
 .cartao{
-    display: grid;
     grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
     row-gap: 1vw;
     column-gap: 1vw;
@@ -108,6 +108,14 @@ h2.tipos_de_membros:after {
     text-transform: uppercase;
     font-size: 1.5vw;
     transition: width 1s;
+}
+
+.member_name{
+    min-height: 6vw;
+    align-items: center;
+    display: flex;
+    margin-left: auto;  
+    margin-right: auto; 
 }
 
 .cartao:hover{
@@ -188,6 +196,9 @@ h2.tipos_de_membros:after {
         margin-left: auto;
         margin-right: auto;
         margin-top: 5%;
+    }
+    .member_name {
+        min-height: 11vw;
     }
 
     .linkedin_membro img, .github_membro img, .mail_icon img{
