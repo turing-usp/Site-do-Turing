@@ -48,10 +48,10 @@ function Rodape() {
                     <TiLocation class='location_icon' />
                     <p class='location_title'>InovaUSP</p>
                 </a>
-                    <p class='location_text'>
-                        Av. Prof. Lúcio Martins Rodrigues, 370<br />
-                        Butantã - São Paulo, SP
-                    </p>
+                <p class='location_text'>
+                    Av. Prof. Lúcio Martins Rodrigues, 370<br />
+                    Butantã - São Paulo, SP
+                </p>
             </div>
         </div>
     );
