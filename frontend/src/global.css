@@ -1,28 +1,61 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap');
 
-/*********************/
-/* body e html geral */
-/*********************/
+/*********/
+/* Geral */
+/*********/
 
 html, body {
     margin: 0;
-    padding: 0;
-    font-family: 'Open Sans', sans-serif;  /* fonte default: Open Sans, fallback para sans-serif, vale a pena colocarmos */
-    font-style: normal;                    /* mais fontes como fallback antes de usarmos a sans-serif */
-    font-weight: normal;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
     background-color: #EAF7FB;
-    color: #929292;
+}
+
+a {
+    text-decoration: none;
 }
 
 .container {
-    margin-top: 3vw;
-    font-size: 2vw;
+    margin-top: 7vw;
 }
 
+.title {
+    display: inline-block;
+    font-size: max(3.5vw, 28px);
+    font-weight: 400;
+    font-family: 'Open Sans', sans-serif;
+    color: #F2994A;
+    text-shadow: 0.03em 0.03em #808080;
+    margin: max(30px, 3vw) 0 max(20px, 2vw) 0;
+}
 
-/****************************/
-/* Estilização do Cabeçalho */
-/****************************/
+.subtitle {
+    display: inline-block;
+    font-size: max(2.8vw, 22px);
+    font-weight: 400;
+    font-family: 'Open Sans', sans-serif;
+    color: #F2994A;
+    text-shadow: 0.03em 0.03em #808080;
+    margin: max(25px, 2.5vw) 0 max(15px, 1.5vw) 0;
+}
+
+.text {
+    font-size: max(1.2vw, 11.5px);
+    font-family: 'Open Sans', sans-serif;
+    color: #808080;
+    margin: 0;
+}
+
+@media (max-width: 800px) {
+
+    .container {
+        margin-top: max(9vw, 50px);
+    }
+}
+
+/*************/
+/* Cabeçalho */
+/*************/
 
 .cabecalho {
     display: flex;
@@ -39,7 +72,7 @@ html, body {
     transition: 0.2s;
 }
 
-.transparente {
+.cabecalho_transparente {
     background-color: transparent;
     box-shadow: none;
 }
@@ -50,37 +83,22 @@ html, body {
     height: 5.5vw;
 }
 
-.cabecalho_txt:link {
+.cabecalho_item {
     text-transform: uppercase;
     font-size: 1.7vw;
     margin-right: 3vw;
     color: #EAF7FB;
     transition: 0.1s;
-}
-
-.cabecalho_txt:visited {
-    color: #EAF7FB;
-}
-
-.cabecalho_txt:hover,
-.cabecalho_txt:focus {
     cursor: pointer;
+}
+
+.cabecalho_item:hover,
+.cabecalho_item:focus,
+.cabecalho_texto_ativo {    
     color: #FC8300;
 }
 
-/*
-Altera a cor do nome da página ativa no cabeçalho.
-!important foi utilizado para ignorar o override dado por :visited
-*/
-.texto_ativo { 
-    color: #FC8300 !important;
-}
-
 @media (max-width: 800px){
-
-    html, body {
-        font-size: 5vw;
-    }
     
     .cabecalho {
         justify-content: center;
@@ -117,11 +135,11 @@ Altera a cor do nome da página ativa no cabeçalho.
         transition: 0.5s;
     }
 
-    .shown {
+    .sidebar_shown {
         margin-left: 0;
     }
     
-    .hidden {
+    .sidebar_hidden {
         margin-left: calc(-1 * var(--sidebar_width));
     }
 
@@ -145,11 +163,11 @@ Altera a cor do nome da página ativa no cabeçalho.
         background-color: #051e5a;
     }
 
-    .sidebar_btn:hover > .cabecalho_txt {
+    .sidebar_btn:hover > .cabecalho_item {
         color: #FC8300
     }
 
-    .btn_ativo {
+    .sidebar_btn_ativo {
         background-color: #041846;
     }
 
@@ -161,7 +179,7 @@ Altera a cor do nome da página ativa no cabeçalho.
         margin: auto;
     }
 
-    .cabecalho_txt:link {
+    .cabecalho_item:link {
         display: flex;
         position: absolute;
         margin: 0;
@@ -169,29 +187,15 @@ Altera a cor do nome da página ativa no cabeçalho.
     }
 }
 
-a {
-    color: #EAF7FB;
-    text-decoration: none;
-    outline: 0
-}
-
-a:visited {
-    text-transform: inherit;
-    text-decoration: none; 
-    font-size: inherit;
-    color: inherit
-}
-
-
-/*************************/
-/* Estilização do Rodapé */
-/*************************/
+/**********/
+/* Rodapé */
+/**********/
 
 .rodape {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     place-items: center;
-    margin-top: 2vw;
+    margin-top: max(20px, 2vw);
     background-color: #041846;
 }
 

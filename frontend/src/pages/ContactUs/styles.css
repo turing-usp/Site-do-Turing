@@ -1,16 +1,10 @@
+/*******/
+/* FAQ */
+/*******/
+
 .faq {
-  display:flex;
-  flex-direction: column;
   margin: auto;
   width: 70%;
-}
-
-.title {
-  font-size: max(3vw, 30px);
-  font-weight: 500;
-  margin: max(30px, 2vw) 0 20px 0;
-  color: #F2994A;
-  text-shadow: 0.03em 0.03em 0.03em gray;
 }
 
 .qtn_ans_ctr {
@@ -27,15 +21,15 @@
 }
 
 .question {
-  font-size: max(14px, 1.3vw);
   line-height: max(24px, 2.3vw);
   padding-left: 20px;
+  margin: 1vw;
   text-align: left;
   cursor: pointer;
   color: #041846;
 }
 
-.toggler {
+.qtn_toggler {
   display: flex;
   align-items: center;
   padding-right: 20px;
@@ -45,20 +39,17 @@
   cursor: pointer;
 }
 
-.toggler_icon {
+.qtn_toggler_icon {
   font-size: max(25px, 2.2vw);
   color: #F2994A;
 }
 
-.answer {
-  font-size: max(14px, 1.3vw);
+.answear {
   line-height: max(24px, 2.3vw);
   padding-left: 20px;
   margin: 0 0 20px 0;
   text-align: left;
-  color: #041846;
-  opacity: 0.8;
-  animation: fadein 0.5s linear;
+  animation: fadein 0.2s linear;
 }
 
 @keyframes fadein {
@@ -66,9 +57,13 @@
   to {opacity: 1};
 }
 
-.hide {
+.answear_hide {
   display: none;
 }
+
+/*********/
+/* Forms */
+/*********/
 
 .forms {
   display: flex;
@@ -80,13 +75,13 @@
   width: 70vw
 }
 
-.field_ctr {
+.form_field_ctr {
   display: flex;
   align-items: center;
   margin: max(5px, 1.2vw);
 }
 
-.icon_bkgd {
+.form_icon_bkgd {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -96,15 +91,14 @@
   border-radius: 0.5vw;
 }
 
-.icon {
+.form_icon {
   font-size: max(16px, 1.4vw);
   color: #ffffff;
 }
 
-.field {
+.form_field {
   flex-grow: 1;
   padding: max(10px, 1.5vw);
-  font-size: max(1vw, 12px);
   margin: 0 10px 0 10px;
   border-radius: max(10px, 1.6vw);
   border: 2px solid rgb(255, 255, 255);
@@ -113,17 +107,16 @@
   position: relative;
 }
 
-.field:focus {
+.form_field:focus {
   border: 2px solid #F2994A;
 }
 
-.msg_field {
-  min-height: max(80px, 4vw);
+.form_msg_field {
+  min-height: max(80px, 9vw);
   resize: vertical;
   font-family: Arial, sans-serif;
   flex-grow: 1;
   padding: max(15px, 1.5vw);
-  font-size: max(1vw, 12px);
   margin: 0 10px 0 10px;
   border-radius: max(10px, 1.6vw);
   border: 2px solid rgb(255, 255, 255);
@@ -131,32 +124,32 @@
   outline: none;
 }
 
-.msg_field:focus {
+.form_msg_field:focus {
   border: 2px solid #041846
 }
 
-.error {
+.form_field_error {
   border: 2px solid #FF0000;
 }
 
-.txt_ctr {
+.form_error_ctr {
   width: max(60px, 6vw);
 }
 
-.txt_error {
+.form_txt_error {
   font-size: max(10px, 0.9vw);
   color: #FF0000;
   animation: fadein 1s;
 }
 
-/* BOTÃO ENVIAR */
+/*** Botão Enviar ***/
 
 :root {
   --btn_width: max(80px, 10vw);
   --btn_height: max(40px, 4vw);
 }
 
-.submit_ctr {
+.form_btn_ctr {
   display: flex;
   position: relative;
   width: var(--btn_width);
@@ -164,7 +157,7 @@
   margin: 0 10px 0 10px;
 }
 
-.static, .moving {
+.form_btn_static, .form_btn_moving {
   width: var(--btn_width);
   height: var(--btn_height);
   font-size: 1.5vw;
@@ -177,7 +170,7 @@
   transition: all 0.2s ease;
 }
 
-.static::after {
+.form_btn_static::after {
   display: flex;
   position: absolute;
   justify-content: center;
@@ -188,11 +181,11 @@
   height: var(--btn_height);
   border-radius: calc(var(--btn_height) / 2);
   transform: translateX(-50%);
-  font-size: max(13px, 1.4vw);
+  font-size: max(1.2vw, 11.5px);
   content: 'Enviar';
 }
 
-.static:hover::after {
+.form_btn_static:hover::after {
   background-color: #F2994A;
   animation: expand 0.3s;
   animation-fill-mode: forwards;
@@ -202,12 +195,12 @@
   to {width: var(--btn_width)}
 }
 
-.round {
+.form_btn_round {
   width: var(--btn_height);
   background-color: transparent;
 }
 
-.loading {
+.form_btn_loading {
   border-color: rgb(193, 194, 252);
   border-top: 3px solid #3BB873;
   animation: rotate 0.5s linear infinite;
@@ -219,7 +212,7 @@
   100% {transform: rotateZ(360deg)}
 }
 
-.success {
+.form_btn_success {
   background-color: #3BB873;
   border: 2px solid #3BB873;
   color: #ffffff;
@@ -229,25 +222,24 @@
 }
 
 /* Previne comportamento indesejado no Firefox*/
-
 @keyframes debug {
   from {transform: rotateZ(0)}
   to {transform: rotateZ(0)}
 }
 
-.success::after {
+.form_btn_success::after {
   font-size: calc(var(--btn_height) / 2);
   content: "\2713";
 }
 
-.fail {
+.form_btn_fail {
   border: none;
   transition: 0.2s;
   background-color: #ff0000;
   cursor: unset;
 }
 
-.fail::after {
+.form_btn_fail::after {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -255,7 +247,7 @@
   content: "\2715";
 }
 
-.pulsate {
+.form_btn_pulsate {
   animation: pump 0.4s linear;
 }
 
@@ -265,9 +257,8 @@
   100% {transform: scale(1)}
 }
 
-
 @media (max-width: 800px) {
-
+  
   .faq {
     width: 80%;
   }
@@ -288,30 +279,30 @@
     padding: 0 10px 0 10px;
   }
 
-  .field_ctr {
+  .form_field_ctr {
     flex-direction: column;
   }
 
-  .field {
+  .form_field {
     margin: 5px 0 0 0;
     width: 85%;    
   }
 
-  .msg_field {
+  .form_msg_field {
     min-height: 80px;
     margin: 5px 0 0 0;
     width: 82%;
   }
 
-  .txt_ctr {
+  .form_error_ctr {
     width: 100%;
   }
 
-  .submit_ctr {
+  .form_btn_ctr {
     margin: 20px 0 0 0;
   }
 
-  .icon, .icon_bkgd {
+  .form_icon, .form_icon_bkgd {
     display: none;
   }
 }
