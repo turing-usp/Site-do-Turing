@@ -9,7 +9,12 @@ import Rodape from '../../Tags/Rodape.js'
 
 import api from '../../services/api.js'
 
+import usePageView from '../../services/googleAnalytics.hook';
+import {pageViewConsts} from '../../services/googleAnalytics.data';
+
 export default function Projects () {
+
+    usePageView(pageViewConsts.Projects);
 
     const [projects, setProjects] = useState([]);
     const [tag, setTag] = useState('');

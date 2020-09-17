@@ -13,8 +13,13 @@ import Cabecalho from '../../Tags/Cabecalho';
 import Rodape from '../../Tags/Rodape';
 import './styles.css';
 
+import usePageView from '../../services/googleAnalytics.hook';
+import {pageViewConsts} from '../../services/googleAnalytics.data';
 
 export default function Homepage() {
+
+    usePageView(pageViewConsts.Homepage);
+
     return(        
         <div class='container home_container'>
             <Cabecalho />

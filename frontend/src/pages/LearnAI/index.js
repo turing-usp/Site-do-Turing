@@ -13,8 +13,12 @@ import Rodape from '../../Tags/Rodape.js';
 import api from '../../services/api.js';
 import './styles.css';
 
+import usePageView from '../../services/googleAnalytics.hook';
+import {pageViewConsts} from '../../services/googleAnalytics.data';
 
 export default function LearnAI () {
+
+    usePageView(pageViewConsts.LearnAI);
 
     /***********/
     /* Estados */
