@@ -11,9 +11,14 @@ import {FiPlus} from 'react-icons/fi'
 import Cabecalho from '../../Tags/Cabecalho.js'
 import Rodape from '../../Tags/Rodape.js'
 
+import usePageView from '../../services/googleAnalytics.hook';
+import {pageViewConsts} from '../../services/googleAnalytics.data';
+
 import api from '../../services/api.js'
 
 export default function AboutUs () { 
+
+    usePageView(pageViewConsts.AboutUs);
     
     const [diretores, setDiretores] = useState([]);
     const [membros, setMembros] = useState([]);
